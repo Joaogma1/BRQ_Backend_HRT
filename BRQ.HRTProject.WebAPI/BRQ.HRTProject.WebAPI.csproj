@@ -27,4 +27,10 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BRQ.HRTProject.Aplicacao\BRQ.HRTProject.Aplicacao.csproj" />
+    <ProjectReference Include="..\BRQ.HRTProject.Infra.Data\BRQ.HRTProject.Infra.Data.csproj" />
+    <ProjectReference Include="..\BRQ.HRTProject.Infra.Ioc\BRQ.HRTProject.Infra.Ioc.csproj" />
+  </ItemGroup>
+
 </Project>

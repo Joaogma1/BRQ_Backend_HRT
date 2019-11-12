@@ -26,6 +26,9 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "BRQ.HRTProject.Aplicacao": "1.0.0",
+          "BRQ.HRTProject.Infra.Data": "1.0.0",
+          "BRQ.HRTProject.Infra.Ioc": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.1",
           "Microsoft.AspNetCore.OData": "7.2.2",
           "Microsoft.EntityFrameworkCore.Design": "2.1.1",
@@ -705,6 +708,60 @@
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
+        }
+      },
+      "BRQ.HRTProject.Aplicacao/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Aplicacao.dll": {}
+        },
+        "compile": {
+          "BRQ.HRTProject.Aplicacao.dll": {}
+        }
+      },
+      "BRQ.HRTProject.Dominio/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Dominio.dll": {}
+        },
+        "compile": {
+          "BRQ.HRTProject.Dominio.dll": {}
+        }
+      },
+      "BRQ.HRTProject.Infra.Data/1.0.0": {
+        "dependencies": {
+          "BRQ.HRTProject.Dominio": "1.0.0",
+          "Microsoft.AspNetCore.OData": "7.2.2",
+          "Microsoft.EntityFrameworkCore.Design": "2.1.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.1",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Infra.Data.dll": {}
+        },
+        "compile": {
+          "BRQ.HRTProject.Infra.Data.dll": {}
+        }
+      },
+      "BRQ.HRTProject.Infra.Ioc/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Infra.Ioc.dll": {}
+        },
+        "compile": {
+          "BRQ.HRTProject.Infra.Ioc.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3788,6 +3845,26 @@
       "sha512": "sha512-td7x21K8LalpjTWCzW/nQboQIFbq9i0r+PCyBBCdLWWnm4NBcdN18vpz/G9hCpUaCIfRL+ZxJNVTywlNlB1aLQ==",
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
+    },
+    "BRQ.HRTProject.Aplicacao/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BRQ.HRTProject.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BRQ.HRTProject.Infra.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BRQ.HRTProject.Infra.Ioc/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

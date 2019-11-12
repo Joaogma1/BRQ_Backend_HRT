@@ -1,9 +1,8 @@
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.deps.json
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.dll
-C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.csprojAssemblyReference.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.pdb
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.csproj.CoreCompileInputs.cache
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.AssemblyInfoInputs.cache
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.AssemblyInfo.cs
-C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.pdb
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.dll
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.pdb
