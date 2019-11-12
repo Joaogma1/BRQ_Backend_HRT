@@ -18,3 +18,6 @@ C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.RazorTargetAssemblyInfo.cache
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.csproj.CopyComplete
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\bin\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.pdb
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.pdb

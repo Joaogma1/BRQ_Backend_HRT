@@ -22,6 +22,7 @@ namespace BRQ.HRTProject.Infra.Data
         public virtual DbSet<Experiencias> Experiencias { get; set; }
         public virtual DbSet<Pessoas> Pessoas { get; set; }
         public virtual DbSet<Requisitos> Requisitos { get; set; }
+        public virtual DbSet<SkillPessoa> SkillPessoa { get; set; }
         public virtual DbSet<Skills> Skills { get; set; }
         public virtual DbSet<TiposContatos> TiposContatos { get; set; }
         public virtual DbSet<TiposExperiencias> TiposExperiencias { get; set; }
@@ -32,7 +33,11 @@ namespace BRQ.HRTProject.Infra.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-                optionsBuilder.UseSqlServer("Data Source=brqsenai.database.windows.net;Initial Catalog=hrt_database;User ID=brqsenai;Password=@Senai132");       
+            if (!optionsBuilder.IsConfigured)
+            {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
+                optionsBuilder.UseSqlServer("Data Source=brqsenai.database.windows.net;Initial Catalog=hrt_database;User ID=brqsenai;Password=@Senai132");
+            }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -51,13 +56,13 @@ namespace BRQ.HRTProject.Infra.Data
                     .WithMany(p => p.Candidaturas)
                     .HasForeignKey(d => d.FkPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__candidatu__fkPes__797309D9");
+                    .HasConstraintName("FK__candidatu__fkPes__7B5B524B");
 
                 entity.HasOne(d => d.FkVagaNavigation)
                     .WithMany(p => p.Candidaturas)
                     .HasForeignKey(d => d.FkVaga)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__candidatu__fkVag__787EE5A0");
+                    .HasConstraintName("FK__candidatu__fkVag__7A672E12");
             });
 
             modelBuilder.Entity<Contatos>(entity =>
@@ -65,7 +70,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("contatos");
 
                 entity.HasIndex(e => e.Contato)
-                    .HasName("UQ__contatos__870056B936A2DFD3")
+                    .HasName("UQ__contatos__870056B9E1111306")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -84,13 +89,13 @@ namespace BRQ.HRTProject.Infra.Data
                     .WithMany(p => p.Contatos)
                     .HasForeignKey(d => d.FkPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__contatos__fkPess__68487DD7");
+                    .HasConstraintName("FK__contatos__fkPess__6A30C649");
 
                 entity.HasOne(d => d.FkTipoContatoNavigation)
                     .WithMany(p => p.Contatos)
                     .HasForeignKey(d => d.FkTipoContato)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__contatos__fkTipo__6754599E");
+                    .HasConstraintName("FK__contatos__fkTipo__693CA210");
             });
 
             modelBuilder.Entity<Empresas>(entity =>
@@ -98,7 +103,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("empresas");
 
                 entity.HasIndex(e => e.Nome)
-                    .HasName("UQ__empresas__6F71C0DC448456C0")
+                    .HasName("UQ__empresas__6F71C0DCF06FE0A4")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -161,11 +166,11 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("pessoas");
 
                 entity.HasIndex(e => e.Cpf)
-                    .HasName("UQ__pessoas__D836E71F67C491A6")
+                    .HasName("UQ__pessoas__D836E71FE662BE03")
                     .IsUnique();
 
                 entity.HasIndex(e => e.Matricula)
-                    .HasName("UQ__pessoas__30962D15CEF0F07F")
+                    .HasName("UQ__pessoas__30962D15B03C6377")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -250,13 +255,34 @@ namespace BRQ.HRTProject.Infra.Data
                     .WithMany(p => p.Requisitos)
                     .HasForeignKey(d => d.FkSkill)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__requisito__fkSki__74AE54BC");
+                    .HasConstraintName("FK__requisito__fkSki__76969D2E");
 
                 entity.HasOne(d => d.FkVagaNavigation)
                     .WithMany(p => p.Requisitos)
                     .HasForeignKey(d => d.FkVaga)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__requisito__fkVag__75A278F5");
+                    .HasConstraintName("FK__requisito__fkVag__778AC167");
+            });
+
+            modelBuilder.Entity<SkillPessoa>(entity =>
+            {
+                entity.ToTable("skillPessoa");
+
+                entity.Property(e => e.Id).HasColumnName("id");
+
+                entity.Property(e => e.FkPessoa).HasColumnName("fkPessoa");
+
+                entity.Property(e => e.FkSkill).HasColumnName("fkSkill");
+
+                entity.HasOne(d => d.FkPessoaNavigation)
+                    .WithMany(p => p.SkillPessoa)
+                    .HasForeignKey(d => d.FkPessoa)
+                    .HasConstraintName("FK__skillPess__fkPes__628FA481");
+
+                entity.HasOne(d => d.FkSkillNavigation)
+                    .WithMany(p => p.SkillPessoa)
+                    .HasForeignKey(d => d.FkSkill)
+                    .HasConstraintName("FK__skillPess__fkSki__619B8048");
             });
 
             modelBuilder.Entity<Skills>(entity =>
@@ -269,7 +295,7 @@ namespace BRQ.HRTProject.Infra.Data
                     .HasColumnName("descricao")
                     .HasColumnType("text");
 
-                entity.Property(e => e.FkPessoa).HasColumnName("fkPessoa");
+                entity.Property(e => e.FkTipoSkill).HasColumnName("fkTipoSkill");
 
                 entity.Property(e => e.Titulo)
                     .IsRequired()
@@ -277,11 +303,11 @@ namespace BRQ.HRTProject.Infra.Data
                     .HasMaxLength(255)
                     .IsUnicode(false);
 
-                entity.HasOne(d => d.FkPessoaNavigation)
+                entity.HasOne(d => d.FkTipoSkillNavigation)
                     .WithMany(p => p.Skills)
-                    .HasForeignKey(d => d.FkPessoa)
+                    .HasForeignKey(d => d.FkTipoSkill)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__skills__fkPessoa__60A75C0F");
+                    .HasConstraintName("FK__skills__fkTipoSk__7C4F7684");
             });
 
             modelBuilder.Entity<TiposContatos>(entity =>
@@ -289,7 +315,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("tiposContatos");
 
                 entity.HasIndex(e => e.Nome)
-                    .HasName("UQ__tiposCon__6F71C0DC6CCEDF99")
+                    .HasName("UQ__tiposCon__6F71C0DC978AB59A")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -306,7 +332,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("tiposExperiencias");
 
                 entity.HasIndex(e => e.Nome)
-                    .HasName("UQ__tiposExp__6F71C0DC18C7E8DB")
+                    .HasName("UQ__tiposExp__6F71C0DC04FE19B3")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -323,7 +349,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("tiposSkills");
 
                 entity.HasIndex(e => e.Nome)
-                    .HasName("UQ__tiposSki__6F71C0DCD4BDC45E")
+                    .HasName("UQ__tiposSki__6F71C0DC91AE2EFF")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -340,7 +366,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("tiposUsuarios");
 
                 entity.HasIndex(e => e.Nome)
-                    .HasName("UQ__tiposUsu__6F71C0DCC0FFD4A7")
+                    .HasName("UQ__tiposUsu__6F71C0DC14A1BEB7")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -357,7 +383,7 @@ namespace BRQ.HRTProject.Infra.Data
                 entity.ToTable("usuarios");
 
                 entity.HasIndex(e => e.Email)
-                    .HasName("UQ__usuarios__AB6E616443142290")
+                    .HasName("UQ__usuarios__AB6E6164A2DEDA6A")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -432,13 +458,13 @@ namespace BRQ.HRTProject.Infra.Data
                     .WithMany(p => p.Vagas)
                     .HasForeignKey(d => d.FkEmpresa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__vagas__fkEmpresa__6FE99F9F");
+                    .HasConstraintName("FK__vagas__fkEmpresa__71D1E811");
 
                 entity.HasOne(d => d.FkPessoaNavigation)
                     .WithMany(p => p.Vagas)
                     .HasForeignKey(d => d.FkPessoa)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__vagas__fkPessoa__70DDC3D8");
+                    .HasConstraintName("FK__vagas__fkPessoa__72C60C4A");
             });
         }
     }

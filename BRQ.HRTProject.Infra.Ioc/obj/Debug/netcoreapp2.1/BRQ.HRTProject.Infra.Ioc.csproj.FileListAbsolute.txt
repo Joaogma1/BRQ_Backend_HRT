@@ -6,3 +6,4 @@ C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.I
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.AssemblyInfo.cs
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.dll
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.pdb
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Ioc\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Ioc.csprojAssemblyReference.cache

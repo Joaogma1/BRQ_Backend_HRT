@@ -5,7 +5,14 @@ namespace BRQ.HRTProject.Dominio.Entidades
 {
     public partial class TiposSkills
     {
+        public TiposSkills()
+        {
+            Skills = new HashSet<Skills>();
+        }
+
         public int Id { get; set; }
         public string Nome { get; set; }
+
+        public ICollection<Skills> Skills { get; set; }
     }
 }

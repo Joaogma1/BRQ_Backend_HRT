@@ -10,7 +10,7 @@ namespace BRQ.HRTProject.Dominio.Entidades
             Candidaturas = new HashSet<Candidaturas>();
             Contatos = new HashSet<Contatos>();
             Experiencias = new HashSet<Experiencias>();
-            Skills = new HashSet<Skills>();
+            SkillPessoa = new HashSet<SkillPessoa>();
             Usuarios = new HashSet<Usuarios>();
             Vagas = new HashSet<Vagas>();
         }
@@ -33,7 +33,7 @@ namespace BRQ.HRTProject.Dominio.Entidades
         public ICollection<Candidaturas> Candidaturas { get; set; }
         public ICollection<Contatos> Contatos { get; set; }
         public ICollection<Experiencias> Experiencias { get; set; }
-        public ICollection<Skills> Skills { get; set; }
+        public ICollection<SkillPessoa> SkillPessoa { get; set; }
         public ICollection<Usuarios> Usuarios { get; set; }
         public ICollection<Vagas> Vagas { get; set; }
     }
