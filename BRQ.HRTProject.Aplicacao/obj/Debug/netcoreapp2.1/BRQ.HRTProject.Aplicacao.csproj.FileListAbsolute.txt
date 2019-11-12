@@ -1,0 +1,9 @@
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.deps.json
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.csprojAssemblyReference.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.csproj.CoreCompileInputs.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.AssemblyInfoInputs.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.AssemblyInfo.cs
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.pdb
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.pdb

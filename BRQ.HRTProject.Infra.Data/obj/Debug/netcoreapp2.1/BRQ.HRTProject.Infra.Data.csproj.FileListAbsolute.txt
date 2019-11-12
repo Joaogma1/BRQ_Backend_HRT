@@ -1,0 +1,11 @@
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.deps.json
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.csprojAssemblyReference.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.AssemblyInfo.cs
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.runtimeconfig.json
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.runtimeconfig.dev.json
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.pdb
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Infra.Data\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Data.pdb
