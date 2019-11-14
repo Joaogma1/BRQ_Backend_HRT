@@ -7,3 +7,8 @@ C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicac
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.AssemblyInfo.cs
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.dll
 C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.pdb
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\Newtonsoft.Json.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\Newtonsoft.Json.xml
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.csproj.CopyComplete
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll
+C:\Users\00836578279\source\repos\BRQ.HRTProject.Solution\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb

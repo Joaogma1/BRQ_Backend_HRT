@@ -9,6 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BRQ.HRTProject.Aplicacao\BRQ.HRTProject.Aplicacao.csproj" />
+    <ProjectReference Include="..\BRQ.HRTProject.Dominio\BRQ.HRTProject.Dominio.csproj" />
+    <ProjectReference Include="..\BRQ.HRTProject.Infra.Data\BRQ.HRTProject.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
       <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.dependencyinjection.abstractions\2.1.1\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
     </Reference>

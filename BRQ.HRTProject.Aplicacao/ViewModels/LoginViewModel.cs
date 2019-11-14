@@ -4,9 +4,9 @@ using System.Text;
 
 namespace BRQ.HRTProject.Aplicacao.ViewModels
 {
-    public class CadastroVagaBeneficioViewModel
+    public class LoginViewModel
     {
-        public int FkVaga { get; set; }
-        public int FkBeneficio { get; set; }
+        public string Email { get; set; }
+        public string Senha { get; set; }
     }
 }

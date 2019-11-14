@@ -748,6 +748,7 @@
         "dependencies": {
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
+          "BRQ.HRTProject.Dominio": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1"
         },
         "runtime": {
@@ -789,6 +790,9 @@
       },
       "BRQ.HRTProject.Infra.Ioc/1.0.0": {
         "dependencies": {
+          "BRQ.HRTProject.Aplicacao": "1.0.0",
+          "BRQ.HRTProject.Dominio": "1.0.0",
+          "BRQ.HRTProject.Infra.Data": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1"
         },
         "runtime": {

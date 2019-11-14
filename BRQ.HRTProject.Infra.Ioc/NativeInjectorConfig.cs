@@ -1,4 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
+using BRQ.HRTProject.Aplicacao.Services;
+using BRQ.HRTProject.Dominio.Interfaces;
+using BRQ.HRTProject.Infra.Data.Repositorios;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +16,28 @@ namespace BRQ.HRTProject.Infra.Ioc
     {
         public static void RegisterServices(this IServiceCollection services)
         {
+            #region Repository
+            services.AddScoped<ITipoSkillRepository, TipoSkillRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
+            services.AddScoped<ITipoExperienciaRepository, TipoExperienciaRepository>();
+            services.AddScoped<IExperienciaRepository, ExperienciaRepository>();
+            services.AddScoped<ITipoContatoRepository, TipoContatoRepository>();
+            services.AddScoped<IContatoRepository, ContatoRepository>();
+            services.AddScoped<IPessoaRepository, PessoaRepository>();
+            services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
+            #endregion
 
+            #region Services
+            services.AddScoped<IPessoaService, PessoaService>();
+            services.AddScoped<IPessoaContatoService, PessoaContatoService>();
+            services.AddScoped<ICadastroPessoaService, CadastroPessoaService>();
+            services.AddScoped<IExperienciaService, ExperienciaService>();
+            services.AddScoped<ITipoExperienciaService, TipoExperienciaService>();
+            services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<ITipoSkillService, TipoSkillService>();
+            services.AddScoped<IContatoService, ContatoService>();
+            services.AddScoped<ITipoContatoService, TipoContatoService>();
+            #endregion
         }
     }
 }

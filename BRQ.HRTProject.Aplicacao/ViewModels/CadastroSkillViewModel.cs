@@ -4,10 +4,12 @@ using System.Text;
 
 namespace BRQ.HRTProject.Aplicacao.ViewModels
 {
-#warning
+
     public class CadastroSkillViewModel
     {
-        public string Nome { get; set; }
-        public int FkIdTipoSkill { get; set; }
+
+        public string Titulo { get; set; }
+        public string Descricao { get; set; }
+        public int FkTipoSkill { get; set; }
     }
 }

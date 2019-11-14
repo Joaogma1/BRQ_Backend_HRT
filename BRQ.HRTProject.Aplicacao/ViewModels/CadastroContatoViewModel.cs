@@ -1,17 +1,16 @@
-﻿//using Newtonsoft.Json;
+﻿using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Text;
-#warning
 namespace BRQ.HRTProject.Aplicacao.ViewModels
 {
     public class CadastroContatoViewModel
     {
-        //[JsonProperty(PropertyName = "NomeContato")]
-        //public string Contato1 { get; set; }
-        //[JsonProperty(PropertyName = "IdTipoContato")]
-        //public int FkIdTipoContato { get; set; }
-        //[JsonProperty(PropertyName = "IdPessoa")]
-        //public int FkIdPessoa { get; set; }
+        public string Contato { get; set; }
+        [JsonProperty(PropertyName = "IdTipoContato")]
+        public int FkTipoContato { get; set; }
+
     }
 }
