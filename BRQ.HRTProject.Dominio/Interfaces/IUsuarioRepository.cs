@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Dominio.Interfaces
 {
-    public interface IUsuarioRepository
+    public interface IUsuarioRepository : IBaseRepository<Usuarios>
     {
         Usuarios BuscarPorEmailSenha(string email, string senha);
     }

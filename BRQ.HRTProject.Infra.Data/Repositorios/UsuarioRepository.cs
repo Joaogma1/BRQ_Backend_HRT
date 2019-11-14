@@ -8,8 +8,12 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class UsuarioRepository : IUsuarioRepository
+    public class UsuarioRepository : RepositoryBase<Usuarios>, IUsuarioRepository
     {
+        public UsuarioRepository(ContextoHRT dbContext) : base(dbContext)
+        {
+        }
+
         public Usuarios BuscarPorEmailSenha(string email, string senha)
         {
             using (ContextoHRT ctx = new ContextoHRT())

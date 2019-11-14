@@ -19,11 +19,11 @@ namespace BRQ.HRTProject.WebAPI.Controllers
     [ApiController]
     public class LoginController : ControllerBase
     {
-        private IUsuarioRepository UsuarioRepository { get; set; }
+        private IUsuarioRepository _UsuarioRepository { get; set; }
 
-        public LoginController()
+        public LoginController(IUsuarioRepository UsuarioRepository)
         {
-            UsuarioRepository = new UsuarioRepository();
+            _UsuarioRepository = UsuarioRepository;
         }
 
         [HttpPost]
@@ -31,7 +31,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
         {
             try
             {
-                Usuarios usuarios = UsuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
+                Usuarios usuarios = _UsuarioRepository.BuscarPorEmailSenha(login.Email, login.Senha);
 
                 if(usuarios == null)
                 {

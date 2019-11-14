@@ -9,7 +9,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class SkillRepository : RepositoryBaseCollaborator<Skills>, ISkillRepository
+    public class SkillRepository : RepositoryBase<Skills>, ISkillRepository
     {
         public SkillRepository(ContextoHRT dbContext) : base(dbContext)
         {

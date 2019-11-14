@@ -25,6 +25,7 @@ namespace BRQ.HRTProject.Infra.Ioc
             services.AddScoped<IContatoRepository, ContatoRepository>();
             services.AddScoped<IPessoaRepository, PessoaRepository>();
             services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
             #endregion
 
             #region Services

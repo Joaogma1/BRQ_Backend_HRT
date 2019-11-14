@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class ExperienciaRepository : RepositoryBaseCollaborator<Experiencias>, IExperienciaRepository
+    public class ExperienciaRepository : RepositoryBase<Experiencias>, IExperienciaRepository
     {
         public ExperienciaRepository(ContextoHRT dbContext) : base(dbContext)
         {

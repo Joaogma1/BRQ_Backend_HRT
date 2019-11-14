@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class TipoSkillRepository : RepositoryBaseCollaborator<TiposSkills>, ITipoSkillRepository
+    public class TipoSkillRepository : RepositoryBase<TiposSkills>, ITipoSkillRepository
     {
         public TipoSkillRepository(ContextoHRT dbContext) : base(dbContext)
         {

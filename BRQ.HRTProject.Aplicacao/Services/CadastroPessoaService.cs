@@ -14,15 +14,16 @@ namespace BRQ.HRTProject.Aplicacao.Services
         private readonly IMapper _mapper;
 
         private readonly IPessoaRepository _pessoaRepository;
-        //private readonly IUsuarioRepository _usuarioRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public CadastroPessoaService(IMapper mapper, IPessoaRepository pessoaRepository)
+        public CadastroPessoaService(IUsuarioRepository usuarioRepository, IMapper mapper, IPessoaRepository pessoaRepository)
         {
+            _usuarioRepository = usuarioRepository;
             _mapper = mapper;
             _pessoaRepository = pessoaRepository;
         }
 
-        public void Add(CadastroPessoaViewModel obj, LoginViewModel usuario)
+        public void Add(CadastroPessoaViewModel obj)
         {
             try
             {
@@ -33,10 +34,12 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 Usuarios user = new Usuarios
                 {
                     FkPessoa = id,
-                    Email = usuario.Email,
-                    Senha = usuario.Senha
+                    Email = obj.Email,
+                    Senha = obj.Senha
                 };
-                // _usuarioRepository.Add(User);
+
+                _usuarioRepository.Add(user);
+
             }
             catch (Exception ex)
             {

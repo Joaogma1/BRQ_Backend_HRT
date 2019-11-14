@@ -8,11 +8,11 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public abstract class RepositoryBaseCollaborator<TEntity> : IBaseRepository<TEntity> where TEntity : class
+    public abstract class RepositoryBase<TEntity> : IBaseRepository<TEntity> where TEntity : class
     {
         private readonly ContextoHRT _dbContext;
 
-        protected RepositoryBaseCollaborator(ContextoHRT dbContext)
+        protected RepositoryBase(ContextoHRT dbContext)
         {
             _dbContext = dbContext;
         }

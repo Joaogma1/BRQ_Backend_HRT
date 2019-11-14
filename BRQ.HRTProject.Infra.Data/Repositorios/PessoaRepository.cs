@@ -8,7 +8,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class PessoaRepository : RepositoryBaseCollaborator<Pessoas>, IPessoaRepository
+    public class PessoaRepository : RepositoryBase<Pessoas>, IPessoaRepository
     {
 
         public PessoaRepository(ContextoHRT dbContext) : base(dbContext)

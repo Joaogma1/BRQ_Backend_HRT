@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class TipoContatoRepository : RepositoryBaseCollaborator<TiposContatos>, ITipoContatoRepository
+    public class TipoContatoRepository : RepositoryBase<TiposContatos>, ITipoContatoRepository
     {
         public TipoContatoRepository(ContextoHRT dbContext) : base(dbContext)
         {

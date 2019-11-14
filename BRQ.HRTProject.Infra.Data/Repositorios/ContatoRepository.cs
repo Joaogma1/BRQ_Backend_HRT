@@ -7,7 +7,7 @@ using System.Text;
 
 namespace BRQ.HRTProject.Infra.Data.Repositorios
 {
-    public class ContatoRepository : RepositoryBaseCollaborator<Contatos>, IContatoRepository
+    public class ContatoRepository : RepositoryBase<Contatos>, IContatoRepository
     {
         public ContatoRepository(ContextoHRT dbContext) : base(dbContext)
         {
