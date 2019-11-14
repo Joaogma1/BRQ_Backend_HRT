@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
+using System;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using System.Collections.Generic;
@@ -13,18 +14,30 @@ namespace BRQ.HRTProject.Aplicacao.Services
         private readonly IMapper _mapper;
 
         private readonly IPessoaRepository _pessoaRepository;
+        private readonly ISkillPessoaRepository _skillPessoaRepository;
 
-        public PessoaService(IMapper mapper, IPessoaRepository pessoaRepository)
+        public PessoaService(ISkillPessoaRepository skillPessoaRepository, IMapper mapper, IPessoaRepository pessoaRepository)
         {
+            _skillPessoaRepository = skillPessoaRepository;
             _mapper = mapper;
             _pessoaRepository = pessoaRepository;
         }
 
         public void AtribuirSkill(SkillPessoaCadastroViewModel skillPessoa)
         {
-            SkillPessoa sp = _mapper.Map<SkillPessoa>(skillPessoa);
+            try
+            {
 
-            _pessoaRepository.AtribuirSKill(sp);
+                SkillPessoa sp = _mapper.Map<SkillPessoa>(skillPessoa);
+                if (_skillPessoaRepository.Exists(sp))
+                    throw new Exception("Skill já foi registrada");
+
+                _pessoaRepository.AtribuirSKill(sp);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("erro: " + ex);
+            }
         }
 
         public IEnumerable<PessoaViewModel> GetAll()

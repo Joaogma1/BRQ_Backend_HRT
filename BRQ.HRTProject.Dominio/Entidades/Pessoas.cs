@@ -30,11 +30,11 @@ namespace BRQ.HRTProject.Dominio.Entidades
         public string Pais { get; set; }
         public bool StatusAlocacao { get; set; }
 
+        public ICollection<Usuarios> Usuarios { get; set; }
         public ICollection<Candidaturas> Candidaturas { get; set; }
         public ICollection<Contatos> Contatos { get; set; }
         public ICollection<Experiencias> Experiencias { get; set; }
         public ICollection<SkillPessoa> SkillPessoa { get; set; }
-        public ICollection<Usuarios> Usuarios { get; set; }
         public ICollection<Vagas> Vagas { get; set; }
     }
 }

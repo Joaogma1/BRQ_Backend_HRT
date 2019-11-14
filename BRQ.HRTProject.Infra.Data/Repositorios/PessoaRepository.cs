@@ -58,5 +58,16 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
                 ctx.SaveChanges();
             }
         }
+
+        public int CriarPessoa(Pessoas obj)
+        {
+            using (ContextoHRT ctx = new ContextoHRT())
+            {
+                Pessoas Pessoa = obj;
+                ctx.Pessoas.Add(Pessoa);
+                ctx.SaveChanges();
+                return Pessoa.Id;
+            }
+        }
     }
 }

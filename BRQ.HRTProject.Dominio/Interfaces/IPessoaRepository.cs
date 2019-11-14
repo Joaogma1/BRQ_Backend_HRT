@@ -6,6 +6,8 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface IPessoaRepository : IBaseRepository<Pessoas>
     {
+        int CriarPessoa(Pessoas obj);
+
         Pessoas BuscarPessoaPorMatricula(string matricula);
 
         void AtribuirSKill(SkillPessoa dados);

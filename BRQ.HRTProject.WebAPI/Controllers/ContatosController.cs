@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Threading.Tasks;
 using BRQ.HRTProject.Aplicacao.Interfaces;
@@ -29,24 +30,28 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             _tipoContatoRepository = tipoContatoRepository;
         }
 
-#warning colocar perm
         [HttpPost]
         public IActionResult InserirContato(CadastroContatoViewModel obj)
         {
+            
             try
             {
-                Pessoas validaPessoa = _pessoaRepository.GetById(1);
-                //if (validaPessoa == null)
-                //{
-                //    return NotFound(new {Mensagem = "id:"+ obj.FkIdPessoa + " não foi encontrada em pessoas" });
-                //}
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+                Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
+
+                if (obj.FkPessoa != idpessoa)
+                    return Unauthorized();
+                                
+                if (validaPessoa == null)
+                    return NotFound(new { Mensagem = "id:" + idpessoa + " não foi encontrada em pessoas" });
+                
                 TiposContatos validaTipoContato = _tipoContatoRepository.GetById(obj.FkTipoContato);
                 if (validaTipoContato == null)
-                {
                     return NotFound(new { Mensagem = "id: " + obj.FkTipoContato + " não foi encontrada em tipo de contato" });
-                }
+
                 _mapper.Add(obj);
                 return Ok();
+
             }
             catch (Exception ex)
             {
@@ -58,7 +63,6 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         [HttpGet]
         public IActionResult Getall()
         {
-#warning
             try
             {
                 return Ok(_contatoRepository.GetAll());
@@ -75,11 +79,18 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
+                int idpessoa =  Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 Contatos contBuscado = _contatoRepository.GetById(id);
-                if (contBuscado == null)
+
+                if (contBuscado.FkPessoa != idpessoa )
+                {
+                    return Unauthorized();
+                }
+                else if (contBuscado == null)
                 {
                     return NotFound(new { Mensagem = $"Contato não encontrado!" });
                 }
+
                 _contatoRepository.Remove(id);
                 return Ok(new { Mensagem = $"Contato deletado com sucesso!" });
             }
@@ -92,19 +103,34 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, CadastroContatoViewModel ct)
         {
-#warning
+
             try
             {
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
                 Contatos ctBuscado = _contatoRepository.GetById(id);
-                if (ctBuscado == null)
-                {
-                    return NotFound(new { Mensagem = $"Contato não encontrado!" });
-                }
-                Pessoas validaPessoa = _pessoaRepository.GetById(1);
+
+                if (id != idpessoa)
+                    return Unauthorized();
+
+                Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
+               
+
+                
                 if (validaPessoa == null)
                 {
                     return NotFound(new { Mensagem = "id:" + 1 + " não foi encontrada em pessoas" });
                 }
+
+                if (ctBuscado.FkPessoa != idpessoa)
+                {
+                    return Unauthorized();
+                }
+                else if (ctBuscado == null)
+                {
+                    return NotFound(new { Mensagem = $"Contato não encontrado!" });
+                }
+                
                 TiposContatos validaTipoContato = _tipoContatoRepository.GetById(ct.FkTipoContato);
                 if (validaTipoContato == null)
                 {

@@ -7,7 +7,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 {
     public interface ICadastroPessoaService 
     {
-        void Add(CadastroPessoaViewModel obj);
+        void Add(CadastroPessoaViewModel obj, LoginViewModel usuario);
         void Update(CadastroPessoaViewModel obj, int idPessoa);
     }
 }

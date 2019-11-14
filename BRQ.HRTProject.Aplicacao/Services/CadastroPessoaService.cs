@@ -14,6 +14,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
         private readonly IMapper _mapper;
 
         private readonly IPessoaRepository _pessoaRepository;
+        //private readonly IUsuarioRepository _usuarioRepository;
 
         public CadastroPessoaService(IMapper mapper, IPessoaRepository pessoaRepository)
         {
@@ -21,10 +22,26 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _pessoaRepository = pessoaRepository;
         }
 
-        public void Add(CadastroPessoaViewModel obj)
+        public void Add(CadastroPessoaViewModel obj, LoginViewModel usuario)
         {
-          Pessoas p = _mapper.Map<Pessoas>(obj);
-            _pessoaRepository.Add(p);
+            try
+            {
+                Pessoas p = _mapper.Map<Pessoas>(obj);
+
+                int id = _pessoaRepository.CriarPessoa(p);
+
+                Usuarios user = new Usuarios
+                {
+                    FkPessoa = id,
+                    Email = usuario.Email,
+                    Senha = usuario.Senha
+                };
+                // _usuarioRepository.Add(User);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("erro: " + ex);
+            }
         }
         public void Update(CadastroPessoaViewModel obj, int idPessoa)
         {

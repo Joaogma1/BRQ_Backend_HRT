@@ -6,6 +6,7 @@ using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Linq;
 
 namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
 {
@@ -68,12 +69,11 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
+
                 Pessoas pessoaBuscada = _pessoaRepository.GetById(id);
 
                 if (pessoaBuscada == null)
-                {
                     return NotFound(new { Mensagem = $"Pessoa não encontrada!" });
-                }
                 return Ok(_mapperExp.GetAll(id));
             }
             catch (Exception ex)
@@ -88,14 +88,15 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
 
             try
             {
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(exp.FkTipoExperiencia);
-                Pessoas pessoaValidacao = _pessoaRepository.GetById(exp.FkPessoa);
-
-                if (tipoExpValidacao == null || pessoaValidacao == null)
-                {
+                exp.FkPessoa = idpessoa;
+               
+                if (tipoExpValidacao == null )
                     return NotFound(new { Mensagem = $"Pessoa e/ou tipo de experiência não existe!" });
-                }
+
                 _mapperExp.Add(exp);
+
                 return Ok();
             }
             catch (Exception ex)
@@ -113,17 +114,17 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 Pessoas pessoaValidacao = _pessoaRepository.GetById(id);
                 Experiencias expBuscada = _experienciaRepository.GetById(id);
 
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
-                if (expBuscada == null)
-                {
+                if (expBuscada.FkPessoa != idpessoa)
+                    return Unauthorized();
+                else if (expBuscada == null)
                     return NotFound(new { Mensagem = $"Experiência não encontrada!" });
-                }
-
                 if (tipoExpValidacao == null || pessoaValidacao == null)
-                {
                     return NotFound(new { Mensagem = $"Pessoa e/ou tipo de experiência não existe!" });
-                }
+
                 _mapperExp.Update(xp, expBuscada.Id);
+
                 return Ok();
             }
             catch (Exception ex)
@@ -137,12 +138,16 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 Experiencias ExpBuscada = _experienciaRepository.GetById(id);
-                if (ExpBuscada == null)
-                {
+
+                if (ExpBuscada.FkPessoa != idpessoa)
+                    return Unauthorized();
+                else if (ExpBuscada == null)
                     return NotFound(new { Mensagem = $"Experiência não encontrada!" });
-                }
+
                 _experienciaRepository.Remove(id);
+
                 return Ok(new { Mensagem = $"Experiência deletada com sucesso!" });
             }
             catch (Exception ex)

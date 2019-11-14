@@ -11,6 +11,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public string Contato { get; set; }
         [JsonProperty(PropertyName = "IdTipoContato")]
         public int FkTipoContato { get; set; }
+        public int FkPessoa { get; set; }
 
     }
 }
