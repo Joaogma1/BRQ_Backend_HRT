@@ -26,6 +26,9 @@ namespace BRQ.HRTProject.Infra.Ioc
             services.AddScoped<IPessoaRepository, PessoaRepository>();
             services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+
+            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+            services.AddScoped<IRequisitoRepository, RequisitoRepository>();
             #endregion
 
             #region Services
@@ -38,6 +41,9 @@ namespace BRQ.HRTProject.Infra.Ioc
             services.AddScoped<ITipoSkillService, TipoSkillService>();
             services.AddScoped<IContatoService, ContatoService>();
             services.AddScoped<ITipoContatoService, TipoContatoService>();
+
+            services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IRequisitoService, RequisitoService>();
             #endregion
         }
     }
