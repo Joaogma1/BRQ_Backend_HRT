@@ -61,6 +61,8 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
                 .ReverseMap();
             CreateMap<Empresas, EmpresaViewModel>()
                 .ReverseMap();
+            CreateMap<Pessoas, EditarPessoaViewModel>()
+                .ReverseMap();
         }
 
     }

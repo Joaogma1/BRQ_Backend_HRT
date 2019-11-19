@@ -33,6 +33,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
 
                 Usuarios user = new Usuarios
                 {
+                    FkTipoUsuario = 3,
                     FkPessoa = id,
                     Email = obj.Email,
                     Senha = obj.Senha
@@ -46,11 +47,18 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 throw new Exception("erro: " + ex);
             }
         }
-        public void Update(CadastroPessoaViewModel obj, int idPessoa)
+        public void Update(EditarPessoaViewModel obj, int idPessoa)
         {
-            Pessoas p = _mapper.Map<Pessoas>(obj);
-            p.Id = idPessoa;
-            _pessoaRepository.Update(p);
+            try
+            {
+                Pessoas p = _mapper.Map<Pessoas>(obj);
+                p.Id = idPessoa;
+                _pessoaRepository.Update(p);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("erro: " + ex);
+            }
         }
     }
 }

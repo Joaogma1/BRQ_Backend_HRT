@@ -33,6 +33,18 @@ namespace BRQ.HRTProject.Aplicacao.Services
             }
         }
 
+        public void Remove(int id)
+        {
+            try
+            {
+                _contatoRepository.Remove(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         public void Update(CadastroContatoViewModel obj, int id)
         {
             Contatos ct = _mapper.Map<Contatos>(obj);

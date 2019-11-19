@@ -28,7 +28,7 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
         {
             using (ContextoHRT ctx = new ContextoHRT())
             {
-                return ctx.Pessoas.Include(x => x.Contatos).Include("Contato.FkIdTipoContatoNavigation").Include(y => y.Experiencias).Include("Experiencia.FkIdTipoExperienciaNavigation").Include(v => v.SkillPessoa).Include("SkillPessoa.FkIdSkillNavigation").Include("SkillPessoa.FkIdSkillNavigation.FkIdTipoSkillNavigation").AsNoTracking().ToList();
+                return ctx.Pessoas.Include(x => x.Contatos).Include("Contatos.FkTipoContatoNavigation").Include(y => y.Experiencias).Include("Experiencias.FkTipoExperienciaNavigation").Include(v => v.SkillPessoa).Include("SkillPessoa.FkSkillNavigation").Include("SkillPessoa.FkSkillNavigation.FkTipoSkillNavigation").AsNoTracking().ToList();
             }
 
         }
@@ -37,7 +37,7 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
         {
             using (ContextoHRT ctx = new ContextoHRT())
             {
-                return ctx.Pessoas.Include(x => x.Contatos).Include("Contato.FkIdTipoContatoNavigation").Include(y => y.Experiencias).Include("Experiencia.FkIdTipoExperienciaNavigation").Include(v => v.SkillPessoa).Include("SkillPessoa.FkIdSkillNavigation").Include("SkillPessoa.FkIdSkillNavigation.FkIdTipoSkillNavigation").AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
+                return ctx.Pessoas.Include(x => x.Contatos).Include("Contatos.FkTipoContatoNavigation").Include(y => y.Experiencias).Include("Experiencias.FkTipoExperienciaNavigation").Include(v => v.SkillPessoa).Include("SkillPessoa.FkSkillNavigation").Include("SkillPessoa.FkSkillNavigation.FkTipoSkillNavigation").AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
             }
         }
 

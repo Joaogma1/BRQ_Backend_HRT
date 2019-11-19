@@ -43,7 +43,8 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                     new Claim(JwtRegisteredClaimNames.Email, usuarios.Email),
                     new Claim(JwtRegisteredClaimNames.Jti, usuarios.Id.ToString()),
                     new Claim(ClaimTypes.Role,usuarios.FkTipoUsuarioNavigation.Nome.ToString()),
-                    new Claim("IdPessoa", usuarios.FkPessoaNavigation.Id.ToString())
+                    new Claim("IdPessoa", usuarios.FkPessoaNavigation.Id.ToString()),
+                    new Claim("Cargo", usuarios.FkTipoUsuarioNavigation.Nome.ToString())
                 };
 
                 var key = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes("L*rKP-x#Fl7-NayO@-Xd!9b"));

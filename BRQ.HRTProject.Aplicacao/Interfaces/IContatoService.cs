@@ -9,5 +9,6 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
     {
         void Add(CadastroContatoViewModel obj);
         void Update(CadastroContatoViewModel obj, int id);
+        void Remove(int id);
     }
 }

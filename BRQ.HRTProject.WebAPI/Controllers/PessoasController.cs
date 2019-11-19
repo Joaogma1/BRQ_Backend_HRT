@@ -37,7 +37,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(LoginViewModel dadosUsuario, CadastroPessoaViewModel pessoa)
+        public IActionResult Post(CadastroPessoaViewModel pessoa)
         {
             try
             {
@@ -53,20 +53,6 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         [EnableQuery]
         [HttpGet("todosdados")]
         public IActionResult GetallData()
-        {
-            try
-            {
-                return Ok(_pessoaContatoMapper.GetAll());
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { error = ex.Message });
-            }
-        }
-
-        [EnableQuery]
-        [HttpGet("todosdados")]
-        public IActionResult GetallDataByUser()
         {
             try
             {
@@ -132,7 +118,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
 
         [Authorize]
         [HttpPut]
-        public IActionResult Edit( CadastroPessoaViewModel dadosPessoa)
+        public IActionResult Edit(EditarPessoaViewModel dadosPessoa)
         {
             try
             {
@@ -188,6 +174,10 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 SkillPessoa skillPessoaBuscada = _skillPessoa.GetById(id);
+                if (skillPessoaBuscada == null)
+                {
+                    return NotFound(new { Mensagem = $"Não foi possível encontrar a skillPessoa" });
+                }
 
                 if (skillPessoaBuscada.FkPessoa != idpessoa)
                     return Unauthorized();
@@ -198,7 +188,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(new { error = ex.Message });
+                return BadRequest(new { error = ex.Message});
             }
         }
     }

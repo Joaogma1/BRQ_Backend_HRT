@@ -61,7 +61,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         
 
         [HttpGet]
-        public IActionResult Getall()
+        public IActionResult GetAll()
         {
             try
             {
