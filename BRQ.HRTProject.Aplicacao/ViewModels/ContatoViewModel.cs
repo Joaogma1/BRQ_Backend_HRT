@@ -10,6 +10,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
    {
         public int Id { get; set; }
         public string Contato { get; set; }
+
         [JsonProperty(PropertyName = "TipoContato")]
         public TipoContatoViewModel FkTipoContatoNavigation { get; set; }
     }

@@ -23,7 +23,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _pessoaRepository = pessoaRepository;
         }
 
-        public void AtribuirSkill(SkillPessoaCadastroViewModel skillPessoa)
+        public void AtribuirSkill(CadastroSkillPessoaViewModel skillPessoa)
         {
             try
             {

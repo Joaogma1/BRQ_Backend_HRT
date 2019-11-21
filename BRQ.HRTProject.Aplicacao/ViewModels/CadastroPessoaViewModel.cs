@@ -16,9 +16,17 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [Required(ErrorMessage = "Informe sua senha:")]
         public string Senha { get; set; }
 
+        [Required(ErrorMessage = "Informe sua matrícula:")]
         public string Matricula { get; set; }
+
+        [Required(ErrorMessage = "Informe seu nome:")]
         public string Nome { get; set; }
+
+        [Required(ErrorMessage = "Informe seu CPF:")]
+        [StringLength(14)]
         public string Cpf { get; set; }
+
+        [Required(ErrorMessage = "Informe seu RG:")]
         public string Rg { get; set; }
         public string Cep { get; set; }
         public string Logradouro { get; set; }

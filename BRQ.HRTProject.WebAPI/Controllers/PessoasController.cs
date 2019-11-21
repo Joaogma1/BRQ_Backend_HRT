@@ -143,7 +143,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         [HttpPost("atribuirSkill")]
-        public IActionResult AtribuirSkill(SkillPessoaCadastroViewModel skillAtribuida)
+        public IActionResult AtribuirSkill(CadastroSkillPessoaViewModel skillAtribuida)
         {
             try
             {

@@ -38,7 +38,7 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
 
             CreateMap<SkillPessoa, SkillPessoaViewModel>()
                 .ReverseMap();
-            CreateMap<SkillPessoa, SkillPessoaCadastroViewModel>()
+            CreateMap<SkillPessoa, CadastroSkillPessoaViewModel>()
                 .ReverseMap();
 
             CreateMap<Contatos, ContatoViewModel>()
