@@ -8,5 +8,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface ITipoExperienciaRepository : IBaseRepository<TiposExperiencias>
     {
+        bool Exists(TiposExperiencias tiposExperiencias);
     }
 }

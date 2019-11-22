@@ -25,12 +25,17 @@ namespace BRQ.HRTProject.Aplicacao.Services
             try
             {
                 TiposExperiencias tipoExp = _mapper.Map<TiposExperiencias>(obj);
+                if (_tipoExperienciaRepository.Exists(tipoExp))
+                {
+                    throw new Exception("Tipo de experiência já cadastrada!");
+                }
                 _tipoExperienciaRepository.Add(tipoExp);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+       
         }
 
         public IEnumerable<TipoExperienciaViewModel> GetAll()
