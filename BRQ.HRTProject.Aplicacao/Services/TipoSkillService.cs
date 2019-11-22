@@ -27,12 +27,16 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                TiposSkills tipoSkill = _mapper.Map<TiposSkills>(obj);
-                _tipoSkillRepository.Add(tipoSkill);
+                TiposSkills tiposSkills = _mapper.Map<TiposSkills>(obj);
+                if (_tipoSkillRepository.Exists(tiposSkills))
+                {
+                    throw new Exception("Tipo de skill já cadastrada!");
+                }
+                _tipoSkillRepository.Add(tiposSkills);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw new Exception();
+                throw new Exception(ex.Message);
             }
         }
 

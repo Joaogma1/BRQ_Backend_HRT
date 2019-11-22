@@ -24,8 +24,12 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                Empresas empresa = _mapper.Map<Empresas>(obj);
-                _empresaRepository.Add(empresa);
+                Empresas tipoExp = _mapper.Map<Empresas>(obj);
+                if (_empresaRepository.Exists(tipoExp))
+                {
+                    throw new Exception("Empresa já cadastrada!");
+                }
+                _empresaRepository.Add(tipoExp);
             }
             catch (Exception ex)
             {

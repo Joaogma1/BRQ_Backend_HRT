@@ -8,5 +8,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface IEmpresaRepository : IBaseRepository<Empresas>
     {
+        bool Exists(Empresas empresas);
     }
 }

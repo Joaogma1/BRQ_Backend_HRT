@@ -8,5 +8,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface ITipoSkillRepository : IBaseRepository<TiposSkills>
     {
+        bool Exists(TiposSkills tiposSkills);
     }
 }

@@ -25,8 +25,12 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                TiposContatos tipoCont = _mapper.Map<TiposContatos>(obj);
-                _tipoContatoRepository.Add(tipoCont);
+                TiposContatos tiposContatos = _mapper.Map<TiposContatos>(obj);
+                if (_tipoContatoRepository.Exists(tiposContatos))
+                {
+                    throw new Exception("Tipo de contato já cadastrado!");
+                }
+                _tipoContatoRepository.Add(tiposContatos);
             }
             catch (Exception ex)
             {
