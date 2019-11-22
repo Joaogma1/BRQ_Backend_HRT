@@ -69,5 +69,15 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
                 return Pessoa.Id;
             }
         }
+
+        public bool CpfExists(string cpf)
+        {
+            using (ContextoHRT ctx = new ContextoHRT())
+            {       
+                return ctx.Pessoas.AsNoTracking().Where(x => x.Cpf == cpf).FirstOrDefault() != null ? true : false;
+            }
+
+
+        }
     }
 }

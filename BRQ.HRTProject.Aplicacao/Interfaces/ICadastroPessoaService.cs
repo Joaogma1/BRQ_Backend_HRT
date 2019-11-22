@@ -9,5 +9,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
     {
         void Add(CadastroPessoaViewModel obj);
         void Update(EditarPessoaViewModel obj, int idPessoa);
+
+        bool CpfExists(String cpf);
     }
 }

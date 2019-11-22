@@ -1017,6 +1017,7 @@
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "BRQ.HRTProject.Dominio": "1.0.0",
+          "BRQ.HRTProject.Infra.Core": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1"
         },
         "runtime": {
@@ -1033,6 +1034,14 @@
         },
         "runtime": {
           "BRQ.HRTProject.Dominio.dll": {}
+        }
+      },
+      "BRQ.HRTProject.Infra.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Infra.Core.dll": {}
         }
       },
       "BRQ.HRTProject.Infra.Data/1.0.0": {
@@ -1768,6 +1777,11 @@
       "sha512": ""
     },
     "BRQ.HRTProject.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BRQ.HRTProject.Infra.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

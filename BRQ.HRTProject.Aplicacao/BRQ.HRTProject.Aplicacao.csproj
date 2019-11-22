@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BRQ.HRTProject.Dominio\BRQ.HRTProject.Dominio.csproj" />
+    <ProjectReference Include="..\BRQ.HRTProject.Infra.Core\BRQ.HRTProject.Infra.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>

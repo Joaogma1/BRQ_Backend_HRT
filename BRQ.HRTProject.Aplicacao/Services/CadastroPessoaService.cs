@@ -47,6 +47,12 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 throw new Exception("erro: " + ex);
             }
         }
+
+        public bool CpfExists(string cpf)
+        {
+            return _pessoaRepository.CpfExists(cpf);
+        }
+
         public void Update(EditarPessoaViewModel obj, int idPessoa)
         {
             try

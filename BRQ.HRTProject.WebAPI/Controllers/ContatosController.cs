@@ -114,9 +114,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                     return Unauthorized();
 
                 Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
-               
-
-                
+                               
                 if (validaPessoa == null)
                 {
                     return NotFound(new { Mensagem = "id:" + 1 + " não foi encontrada em pessoas" });

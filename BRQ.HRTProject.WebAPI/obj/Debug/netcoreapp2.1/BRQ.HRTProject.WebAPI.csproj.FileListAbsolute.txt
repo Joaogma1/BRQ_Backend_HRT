@@ -94,3 +94,5 @@ C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\obj
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.csproj.CopyComplete
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.dll
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\obj\Debug\netcoreapp2.1\BRQ.HRTProject.WebAPI.pdb
+C:\Users\00836578279\Desktop\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\00836578279\Desktop\Agora_Vai_HRT\BRQ.HRTProject.WebAPI\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb

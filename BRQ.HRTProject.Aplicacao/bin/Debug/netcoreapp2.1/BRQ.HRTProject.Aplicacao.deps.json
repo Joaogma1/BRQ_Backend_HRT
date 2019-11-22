@@ -11,6 +11,7 @@
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "BRQ.HRTProject.Dominio": "1.0.0",
+          "BRQ.HRTProject.Infra.Core": "1.0.0",
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
           "Newtonsoft.Json": "11.0.0.0"
         },
@@ -525,6 +526,14 @@
           "BRQ.HRTProject.Dominio.dll": {}
         }
       },
+      "BRQ.HRTProject.Infra.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "runtime": {
+          "BRQ.HRTProject.Infra.Core.dll": {}
+        }
+      },
       "Newtonsoft.Json/11.0.0.0": {
         "runtime": {
           "Newtonsoft.Json.dll": {
@@ -941,6 +950,11 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "BRQ.HRTProject.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BRQ.HRTProject.Infra.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

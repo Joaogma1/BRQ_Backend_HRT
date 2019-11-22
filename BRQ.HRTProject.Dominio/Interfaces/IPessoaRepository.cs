@@ -16,5 +16,7 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 
         List<Pessoas> BuscarTodosDados();
         Pessoas BuscarTodosDadosPorID(int id);
+
+        bool CpfExists(string cpf);
     }
 }

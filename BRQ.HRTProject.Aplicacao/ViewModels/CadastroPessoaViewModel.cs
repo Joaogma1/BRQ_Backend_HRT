@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BRQ.HRTProject.Infra.Core.Validacoes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -10,23 +11,25 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
     {
 
         [DataType(DataType.EmailAddress)]
-        [Required(ErrorMessage = "Informe seu email:")]
+        [Required(ErrorMessage = "Informe seu email")]
         public string Email { get; set; }
 
-        [Required(ErrorMessage = "Informe sua senha:")]
+        [Required(ErrorMessage = "Informe sua senha")]
+        [ValidaSenha(ErrorMessage = "A senha deve conter 8 caracteres, sendo um carácter especial, um maiusculo, um minusculo e um número")]
         public string Senha { get; set; }
 
-        [Required(ErrorMessage = "Informe sua matrícula:")]
+        [Required(ErrorMessage = "Informe sua matrícula")]
         public string Matricula { get; set; }
 
-        [Required(ErrorMessage = "Informe seu nome:")]
+        [Required(ErrorMessage = "Informe seu nome")]
         public string Nome { get; set; }
 
-        [Required(ErrorMessage = "Informe seu CPF:")]
+        [Required(ErrorMessage = "Informe seu CPF")]
+        [ValidaCPF(ErrorMessage = "CPF inválido")]
         [StringLength(14)]
         public string Cpf { get; set; }
 
-        [Required(ErrorMessage = "Informe seu RG:")]
+        [Required(ErrorMessage = "Informe seu RG")]
         public string Rg { get; set; }
         public string Cep { get; set; }
         public string Logradouro { get; set; }

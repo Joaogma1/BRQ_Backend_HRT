@@ -976,6 +976,19 @@
         "runtime": {
           "bin/placeholder/BRQ.HRTProject.Dominio.dll": {}
         }
+      },
+      "BRQ.HRTProject.Infra.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1"
+        },
+        "compile": {
+          "bin/placeholder/BRQ.HRTProject.Infra.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BRQ.HRTProject.Infra.Core.dll": {}
+        }
       }
     }
   },
@@ -3663,6 +3676,11 @@
       "type": "project",
       "path": "../BRQ.HRTProject.Dominio/BRQ.HRTProject.Dominio.csproj",
       "msbuildProject": "../BRQ.HRTProject.Dominio/BRQ.HRTProject.Dominio.csproj"
+    },
+    "BRQ.HRTProject.Infra.Core/1.0.0": {
+      "type": "project",
+      "path": "../BRQ.HRTProject.Infra.Core/BRQ.HRTProject.Infra.Core.csproj",
+      "msbuildProject": "../BRQ.HRTProject.Infra.Core/BRQ.HRTProject.Infra.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3670,28 +3688,29 @@
       "AutoMapper >= 9.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
       "BRQ.HRTProject.Dominio >= 1.0.0",
+      "BRQ.HRTProject.Infra.Core >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection >= 2.1.1",
       "Microsoft.NETCore.App >= 2.1.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\43369172801\\.nuget\\packages\\": {},
+    "C:\\Users\\00836578279\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\APIAgoraVai\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
+      "projectUniqueName": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
       "projectName": "BRQ.HRTProject.Aplicacao",
-      "projectPath": "C:\\Users\\43369172801\\Desktop\\APIAgoraVai\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
-      "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\43369172801\\Desktop\\APIAgoraVai\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\obj\\",
+      "projectPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
+      "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3704,8 +3723,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\43369172801\\Desktop\\APIAgoraVai\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
-              "projectPath": "C:\\Users\\43369172801\\Desktop\\APIAgoraVai\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
+            "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+              "projectPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
+            },
+            "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
+              "projectPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj"
             }
           }
         }

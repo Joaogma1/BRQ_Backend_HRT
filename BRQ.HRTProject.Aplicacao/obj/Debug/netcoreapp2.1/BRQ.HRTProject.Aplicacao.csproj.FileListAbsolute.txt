@@ -52,3 +52,5 @@ C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.csproj.CopyComplete
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.dll
 C:\Users\43369172801\Desktop\APIAgoraVai\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Aplicacao.pdb
+C:\Users\00836578279\Desktop\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\00836578279\Desktop\Agora_Vai_HRT\BRQ.HRTProject.Aplicacao\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb

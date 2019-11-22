@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
-using System.Security.Claims;
-using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
+using BRQ.HRTProject.Infra.Core.Validacoes;
 using Microsoft.AspNet.OData;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Linq;
+
 
 namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
 {
@@ -19,11 +18,11 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
     [ApiController]
     public class PessoasController : ControllerBase
     {
-        private ICadastroPessoaService _CadastroPessoaMapper;
-        private IPessoaContatoService _pessoaContatoMapper;
-        private IPessoaRepository _pessoaRepository;
-        private ISkillRepository _skillRepository;
-        private IPessoaService _pessoaMapper;
+        private readonly ICadastroPessoaService _CadastroPessoaMapper;
+        private readonly IPessoaContatoService _pessoaContatoMapper;
+        private readonly IPessoaRepository _pessoaRepository;
+        private readonly ISkillRepository _skillRepository;
+        private readonly IPessoaService _pessoaMapper;
         private readonly ISkillPessoaRepository _skillPessoa;
 
         public PessoasController(ISkillPessoaRepository skillPessoa, ICadastroPessoaService CadastroPessoaMapper, IPessoaContatoService pessoaMapper, IPessoaRepository pessoaRepository, IPessoaService pessoaService, ISkillRepository skillRepository)
@@ -41,6 +40,9 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
+                //if (!ValidaCPF.CPFValido(pessoa.Cpf))
+                //    return BadRequest(new { Mensagem =  "CPF Invalido" });
+                
                 _CadastroPessoaMapper.Add(pessoa);
                 return Ok();
             }
@@ -105,9 +107,9 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             {
                 Pessoas p = _pessoaRepository.GetById(id);
                 if (p == null)
-                
+
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
-                
+
                 return Ok(_pessoaMapper.GetById(id));
             }
             catch (Exception ex)
@@ -122,16 +124,18 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
-                int  id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
+                int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
                 Pessoas PessoaBuscada = _pessoaRepository.GetById(id);
+
+                //if (!ValidaCPF.CPFValido(dadosPessoa.Cpf))
+                //    return BadRequest(new { Mensagem = "CPF Invalido" });
+
                 if (PessoaBuscada.Id != id)
-                
                     return Unauthorized();
-                
+
                 else if (PessoaBuscada == null)
-                
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
-                
+
                 _CadastroPessoaMapper.Update(dadosPessoa, PessoaBuscada.Id);
 
                 return Ok();
@@ -188,7 +192,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(new { error = ex.Message});
+                return BadRequest(new { error = ex.Message });
             }
         }
     }
