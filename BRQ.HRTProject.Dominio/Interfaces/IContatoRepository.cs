@@ -7,5 +7,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface IContatoRepository : IBaseRepository<Contatos>
     {
+        bool Exists(Contatos contatos);
     }
 }

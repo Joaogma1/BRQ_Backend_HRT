@@ -27,17 +27,19 @@ namespace BRQ.HRTProject.Aplicacao.Services
 
         public void Add(CadastroExperienciaViewModel obj)
         {
-
             try
             {
                 Experiencias exp = _mapper.Map<Experiencias>(obj);
+                if (_experienciaRepository.Exists(exp))
+                {
+                    throw new Exception("Experiência já cadastrada!");
+                }
                 _experienciaRepository.Add(exp);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-            }
-            
+            }   
         }
 
         /// <summary>
