@@ -40,9 +40,10 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
-                //if (!ValidaCPF.CPFValido(pessoa.Cpf))
-                //    return BadRequest(new { Mensagem =  "CPF Invalido" });
-                
+                if (_CadastroPessoaMapper.CpfExists(pessoa.Cpf))
+                {
+                    return BadRequest(new { error = "CPF informado já está em uso" });
+                }
                 _CadastroPessoaMapper.Add(pessoa);
                 return Ok();
             }

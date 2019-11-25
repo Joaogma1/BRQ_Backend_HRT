@@ -5,6 +5,7 @@ using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Text;
 
 namespace BRQ.HRTProject.Aplicacao.Services
@@ -30,22 +31,27 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 Pessoas p = _mapper.Map<Pessoas>(obj);
 
                 int id = _pessoaRepository.CriarPessoa(p);
-
-                Usuarios user = new Usuarios
+                try
                 {
-                    FkTipoUsuario = 3,
-                    FkPessoa = id,
-                    Email = obj.Email,
-                    Senha = obj.Senha
-                };
-
-                _usuarioRepository.Add(user);
-
+                    Usuarios user = new Usuarios
+                    {
+                        FkTipoUsuario = 3,
+                        FkPessoa = id,
+                        Email = obj.Email,
+                        Senha = obj.Senha
+                    };
+                    _usuarioRepository.Add(user);
+                }
+                catch (SqlException ex)
+                {
+                    if (ex.Number == 2601)
+                        _pessoaRepository.Remove(id);
+                }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                throw new Exception("erro: " + ex);
-            }
+                throw new Exception("Error: " + e);
+            };
         }
 
         public bool CpfExists(string cpf)
