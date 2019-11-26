@@ -9,5 +9,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
         List<Skills> ListaSkills();
         Skills BuscaSkillPorId(int id);
         List<SkillPessoa> ListaSkillsPorIdUsuario(int id);
+        bool Exists(Skills skills);
     }
 }

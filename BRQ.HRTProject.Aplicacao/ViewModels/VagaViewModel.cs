@@ -21,7 +21,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [JsonProperty(PropertyName = "IdEmpresa")]
         public int FkEmpresa { get; set; }
 
-        [JsonProperty(PropertyName = "IdSkill")]
+        [JsonProperty(PropertyName = "IdPessoa")]
         public int FkPessoa { get; set; }
     }
 }

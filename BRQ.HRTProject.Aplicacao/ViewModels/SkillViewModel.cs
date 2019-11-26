@@ -16,7 +16,6 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [JsonProperty(PropertyName = "IdTipoSkill")]
         public int FkTipoSkill { get; set; }
 
-        [JsonProperty(PropertyName = "IdTipoSkill")]
         public TipoSkillViewModel FkTipoSkillNavigation { get; set; }
 
         [JsonProperty(PropertyName = "SkillPessoa")]
