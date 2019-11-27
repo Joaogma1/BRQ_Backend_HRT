@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace BRQ.HRTProject.Dominio.Entidades
+namespace BRQ.HRTProject.WebAPI.DomainsContextDir
 {
     public partial class Vagas
     {

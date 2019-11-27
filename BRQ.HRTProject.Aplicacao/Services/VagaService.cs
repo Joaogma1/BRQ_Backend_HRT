@@ -32,6 +32,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
             try
             {
                 Vagas vagas = _mapper.Map<Vagas>(dadosVaga);
+                
                 _vagaRepository.Add(vagas);
 
             }
@@ -41,7 +42,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
             }
         }
 
-        public void EditarVaga(CadastroVagaViewModel dadosVaga, int id)
+        public void EditarVaga(EdicaoVagaViewModel dadosVaga, int id)
         {
             try
             {

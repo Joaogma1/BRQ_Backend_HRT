@@ -12,7 +12,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 
         void AtribuirFuncionarioVaga(int idVaga, int idFuncionario);
 
-        void EditarVaga(CadastroVagaViewModel dadosVaga,  int id);
+        void EditarVaga(EdicaoVagaViewModel dadosVaga,  int id);
 
         List<VagaViewModel> ListarVagas();
 

@@ -75,7 +75,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, CadastroVagaViewModel obj)
+        public IActionResult Update(int id, EdicaoVagaViewModel obj)
         {
             try
             {
