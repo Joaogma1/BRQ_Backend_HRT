@@ -42,13 +42,11 @@ namespace BRQ.HRTProject.Aplicacao.Services
             }
         }
 
-        public void EditarVaga(EdicaoVagaViewModel dadosVaga, int id)
+        public void EditarVaga(Vagas obj)
         {
             try
             {
-                Vagas vagas = _mapper.Map<Vagas>(dadosVaga);
-                vagas.Id = id;
-                _vagaRepository.Update(vagas);
+                _vagaRepository.Update(obj);
             }
             catch (Exception ex)
             {
