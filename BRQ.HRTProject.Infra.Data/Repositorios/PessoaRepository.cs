@@ -76,8 +76,6 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
             {       
                 return ctx.Pessoas.AsNoTracking().Where(x => x.Cpf == cpf).FirstOrDefault() != null ? true : false;
             }
-
-
         }
     }
 }
