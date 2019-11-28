@@ -7,6 +7,7 @@ using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             _tipoContatoRepository = tipoContatoRepository;
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult InserirContato(CadastroContatoViewModel obj)
         {
@@ -38,10 +40,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
-
-                if (obj.FkPessoa != idpessoa)
-                    return Unauthorized();
-                                
+                               
                 if (validaPessoa == null)
                     return NotFound(new { Mensagem = "id:" + idpessoa + " não foi encontrada em pessoas" });
                 
@@ -49,7 +48,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 if (validaTipoContato == null)
                     return NotFound(new { Mensagem = "id: " + obj.FkTipoContato + " não foi encontrada em tipo de contato" });
 
-                _mapper.Add(obj);
+                _mapper.Add(obj, idpessoa);
                 return Ok();
 
             }
