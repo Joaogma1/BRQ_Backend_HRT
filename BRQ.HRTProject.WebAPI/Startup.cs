@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using BRQ.HRTProject.Infra.Data;
+﻿using BRQ.HRTProject.Infra.Data;
 using BRQ.HRTProject.Infra.Ioc;
 using BRQ.HRTProject.WebAPI.Extensions;
 using Microsoft.AspNet.OData.Extensions;
@@ -15,6 +13,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.Linq;
 
 namespace BRQ.HRTProject.WebAPI
 {
@@ -54,6 +54,7 @@ namespace BRQ.HRTProject.WebAPI
             {
                 options.UseSqlServer(conexao);
             });
+
             services.AddOData();
 
             // O forEach é responsavel para mapear e dar suporte ao OData no swagger

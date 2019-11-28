@@ -34,7 +34,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             _pessoaMapper = pessoaService;
             _skillRepository = skillRepository;
         }
-
+        [Authorize]
         [HttpPost]
         public IActionResult Post(CadastroPessoaViewModel pessoa)
         {
@@ -53,6 +53,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [EnableQuery]
         [HttpGet("todosdados")]
         public IActionResult GetallData()
@@ -66,7 +67,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { error = ex.Message });
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [EnableQuery]
         [HttpGet]
         public IActionResult Getall()
@@ -81,6 +82,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador, Colaborador ,Recursos Humanos")]
         [EnableQuery]
         [HttpGet("todosdados/{id}")]
         public IActionResult GetAllById(int id)
@@ -99,7 +101,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.Message });
             }
         }
-
+        [Authorize]
         [EnableQuery]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -128,14 +130,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
                 Pessoas PessoaBuscada = _pessoaRepository.GetById(id);
 
-
-                if (PessoaBuscada.Id != id)
-                    return Unauthorized();
-
-                else if (PessoaBuscada == null)
-                    return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
-
-                _CadastroPessoaMapper.Update(dadosPessoa, PessoaBuscada.Id);
+                _CadastroPessoaMapper.Update(dadosPessoa, id);
 
                 return Ok();
             }
@@ -168,24 +163,18 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpDelete("desatribuirskill/{id}")]
         public IActionResult DesatribuirSkill(int id)
         {
             try
             {
-                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 SkillPessoa skillPessoaBuscada = _skillPessoa.GetById(id);
                 if (skillPessoaBuscada == null)
                 {
                     return NotFound(new { Mensagem = $"Não foi possível encontrar a skillPessoa" });
                 }
-
-                if (skillPessoaBuscada.FkPessoa != idpessoa)
-                    return Unauthorized();
-
                 _pessoaRepository.DesAtribuirSkill(id);
-
                 return Ok();
             }
             catch (Exception ex)

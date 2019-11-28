@@ -8,7 +8,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
     public interface ICadastroPessoaService 
     {
         void Add(CadastroPessoaViewModel obj);
-        void Update(EditarPessoaViewModel obj, int idPessoa);
+        void Update(EditarPessoaViewModel obj, int id);
 
         bool CpfExists(String cpf);
     }

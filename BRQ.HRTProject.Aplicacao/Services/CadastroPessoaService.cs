@@ -59,13 +59,13 @@ namespace BRQ.HRTProject.Aplicacao.Services
             return _pessoaRepository.CpfExists(cpf);
         }
 
-        public void Update(EditarPessoaViewModel obj, int idPessoa)
+        public void Update(EditarPessoaViewModel obj, int id)
         {
             try
             {
                 Pessoas p = _mapper.Map<Pessoas>(obj);
-                p.Id = idPessoa;
                 _pessoaRepository.Update(p);
+                p.Id = id;
             }
             catch (Exception ex)
             {

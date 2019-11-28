@@ -25,7 +25,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRQ.HRTProject.Infra.Ioc", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Infra.Core", "5 - Infra.Core", "{C0E2C755-D798-4776-96A4-E9C0BE6A60A4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BRQ.HRTProject.Infra.Core", "BRQ.HRTProject.Infra.Core\BRQ.HRTProject.Infra.Core.csproj", "{7984B001-538F-4371-876C-BFFE735447BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BRQ.HRTProject.Infra.Core", "BRQ.HRTProject.Infra.Core\BRQ.HRTProject.Infra.Core.csproj", "{7984B001-538F-4371-876C-BFFE735447BC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
