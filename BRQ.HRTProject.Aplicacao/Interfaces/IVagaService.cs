@@ -1,5 +1,6 @@
 ﻿
 using BRQ.HRTProject.Aplicacao.ViewModels;
+using BRQ.HRTProject.Dominio.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,7 +13,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 
         void AtribuirFuncionarioVaga(int idVaga, int idFuncionario);
 
-        void EditarVaga(EdicaoVagaViewModel dadosVaga,  int id);
+        void EditarVaga(Vagas dadosVaga);
 
         List<VagaViewModel> ListarVagas();
 

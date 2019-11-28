@@ -84,8 +84,8 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 {
                     return NotFound(new { Mensagem = "Vaga não encontrada!" });
                 }
-
-                _mapper.EditarVaga(obj, vagaBuscada.Id);
+                MapAlteracao(vagaBuscada, obj);
+                _mapper.EditarVaga(vagaBuscada);
                 return Ok(new { Mensagem = "Vaga atualizada com sucesso!" });
             }
             catch (Exception ex)
@@ -112,6 +112,15 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             {
                 return BadRequest(new { Erro = ex.ToString() });
             }
+        }
+        public static void MapAlteracao(Vagas vaga, EdicaoVagaViewModel dados)
+        {
+            vaga.Titulo = dados.Titulo;
+            vaga.StatusSituacao = dados.StatusSituacao;
+            vaga.FkPessoa = dados.FkPessoa;
+            vaga.FkEmpresa = dados.FkEmpresa;
+            vaga.Descricao = dados.Descricao;
+            vaga.CargaHoraria = dados.CargaHoraria;
         }
     }
 }

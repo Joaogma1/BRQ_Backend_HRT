@@ -128,8 +128,6 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
                 Pessoas PessoaBuscada = _pessoaRepository.GetById(id);
 
-                //if (!ValidaCPF.CPFValido(dadosPessoa.Cpf))
-                //    return BadRequest(new { Mensagem = "CPF Invalido" });
 
                 if (PessoaBuscada.Id != id)
                     return Unauthorized();
