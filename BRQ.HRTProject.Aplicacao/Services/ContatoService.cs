@@ -21,7 +21,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
         }
 
        
-        public void Add(CadastroContatoViewModel obj)
+        public void Add(CadastroContatoViewModel obj, int idPessoa)
         {
             try
             {
@@ -30,6 +30,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 {
                     throw new Exception("Contato já cadastrado!");
                 }
+                contato.FkPessoa = idPessoa;
                 _contatoRepository.Add(contato);
             }
             catch (Exception ex)

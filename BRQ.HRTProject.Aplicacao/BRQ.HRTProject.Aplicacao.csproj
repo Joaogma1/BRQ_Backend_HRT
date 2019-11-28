@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ViewModels\CadastroBeneficioViewModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Extensions\" />
   </ItemGroup>
 

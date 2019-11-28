@@ -13,11 +13,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public string Contato { get; set; }
 
         [Required(ErrorMessage = "Informe o ID do tipo de contato:")]
-        [JsonProperty(PropertyName = "IdTipoContato")]
+        [JsonProperty(PropertyName = "idTipoContato")]
         public int FkTipoContato { get; set; }
-
-        [Required(ErrorMessage = "Informe o ID da pessoa:")]
-        [JsonProperty(PropertyName = "IdPessoa")]
-        public int FkPessoa { get; set; }
     }
 }
