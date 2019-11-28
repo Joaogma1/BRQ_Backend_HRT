@@ -145,6 +145,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost("atribuirSkill")]
         public IActionResult AtribuirSkill(CadastroSkillPessoaViewModel skillAtribuida)
         {
@@ -152,8 +153,6 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
-                if (skillAtribuida.FkPessoa != idpessoa)
-                    return Unauthorized();
 
                 Skills skillBuscada = _skillRepository.GetById(skillAtribuida.FkSkill.Value);
                 if (skillBuscada == null)

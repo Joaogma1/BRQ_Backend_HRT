@@ -50,3 +50,14 @@ C:\Users\43369172801\Desktop\API\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\
 C:\Users\43369172801\Desktop\API\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.AssemblyInfo.cs
 C:\Users\43369172801\Desktop\API\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll
 C:\Users\43369172801\Desktop\API\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.deps.json
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.runtimeconfig.json
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.runtimeconfig.dev.json
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.csprojAssemblyReference.cache
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.AssemblyInfoInputs.cache
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.AssemblyInfo.cs
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll
+C:\Users\52742298835\Desktop\Brq\Agora_Vai_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb
