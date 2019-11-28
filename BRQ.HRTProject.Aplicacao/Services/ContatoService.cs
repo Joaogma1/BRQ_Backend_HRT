@@ -20,11 +20,16 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _contatoRepository = contatoRepository;
         }
 
+       
         public void Add(CadastroContatoViewModel obj)
         {
             try
             {
                 Contatos contato = _mapper.Map<Contatos>(obj);
+                if (_contatoRepository.Exists(contato))
+                {
+                    throw new Exception("Contato já cadastrado!");
+                }
                 _contatoRepository.Add(contato);
             }
             catch (Exception ex)

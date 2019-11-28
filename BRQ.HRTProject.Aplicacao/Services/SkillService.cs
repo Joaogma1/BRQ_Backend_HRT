@@ -29,11 +29,14 @@ namespace BRQ.HRTProject.Aplicacao.Services
             try
             {
                 Skills skill = _mapper.Map<Skills>(obj);
+                if (_skillRepository.Exists(skill))
+                {
+                    throw new Exception("Skill já cadastrada!");
+                }
                 _skillRepository.Add(skill);
             }
             catch (Exception)
             {
-
                 throw;
             }
         }

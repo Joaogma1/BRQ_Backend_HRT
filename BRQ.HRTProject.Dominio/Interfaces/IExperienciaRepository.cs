@@ -10,5 +10,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
         Experiencias BuscarExperienciaPorId(int id);
         List<Experiencias> BuscarExperienciaPorIdPessoa(int id);
         List<Experiencias> ListarTodasExperiencias();
+        bool Exists(Experiencias experiencias);
     }
 }

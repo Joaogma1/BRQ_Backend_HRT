@@ -20,13 +20,12 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [DisplayFormat(DataFormatString = "dd/mm/yyyy")]
         public DateTime? DtFim { get; set; }
 
-        [JsonProperty(PropertyName = "IdTipoExperiencia")]
+        [JsonProperty(PropertyName = "idTipoExperiencia")]
         public int FkTipoExperiencia { get; set; }
 
-        [JsonProperty(PropertyName = "IdPessoa")]
+        [JsonProperty(PropertyName = "idPessoa")]
         public int FkPessoa { get; set; }
 
-        [JsonProperty(PropertyName = "IdTipoExperiencia")]
         public TipoExperienciaViewModel FkTipoExperienciaNavigation { get; set; }
     }
 }

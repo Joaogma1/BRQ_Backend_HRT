@@ -18,7 +18,7 @@ namespace BRQ.HRTProject.Dominio.Entidades
         public int? CargaHoraria { get; set; }
         public bool? StatusSituacao { get; set; }
         public int FkEmpresa { get; set; }
-        public int FkPessoa { get; set; }
+        public int? FkPessoa { get; set; }
 
         public Empresas FkEmpresaNavigation { get; set; }
         public Pessoas FkPessoaNavigation { get; set; }

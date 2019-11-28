@@ -39,5 +39,15 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
             }
         }
 
+        public bool Exists(Experiencias experiencias)
+        {
+            using (ContextoHRT ctx = new ContextoHRT())
+            {
+                if (ctx.Experiencias.AsNoTracking().Where(x => x.Titulo == experiencias.Titulo).FirstOrDefault() != null)
+                    return true;
+                else
+                    return false;
+            }
+        }
     }
 }

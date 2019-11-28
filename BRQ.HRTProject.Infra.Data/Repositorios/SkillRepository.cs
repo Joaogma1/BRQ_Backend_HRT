@@ -42,5 +42,20 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
                 return ctx.Skills.Include(x => x.FkTipoSkillNavigation).Where(x => x.Id == id).FirstOrDefault();
             }
         }
+
+        public bool Exists(Skills skills)
+        {
+            using(ContextoHRT ctx = new ContextoHRT())
+            {
+                if(ctx.Skills.AsNoTracking().Where(x => x.Titulo == skills.Titulo).FirstOrDefault() != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
     }
 }

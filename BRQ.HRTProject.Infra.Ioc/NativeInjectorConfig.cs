@@ -29,6 +29,7 @@ namespace BRQ.HRTProject.Infra.Ioc
 
             services.AddScoped<IEmpresaRepository, EmpresaRepository>();
             services.AddScoped<IRequisitoRepository, RequisitoRepository>();
+            services.AddScoped<IVagaRepository, VagaRepository>();
             #endregion
 
             #region Services
@@ -44,6 +45,7 @@ namespace BRQ.HRTProject.Infra.Ioc
 
             services.AddScoped<IEmpresaService, EmpresaService>();
             services.AddScoped<IRequisitoService, RequisitoService>();
+            services.AddScoped<IVagaService, VagaService>();
             #endregion
         }
     }

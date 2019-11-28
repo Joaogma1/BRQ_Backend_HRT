@@ -17,11 +17,11 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public DateTime? DtFim { get; set; }
 
         [Required(ErrorMessage = "Informe o ID do tipo de experiência:")]
-        [JsonProperty(PropertyName = "IdTipoExperiencia")]
+        [JsonProperty(PropertyName = "idTipoExperiencia")]
         public int FkTipoExperiencia { get; set; }
 
         [Required(ErrorMessage = "Informe o ID da pessoa:")]
-        [JsonProperty(PropertyName = "IdPessoa:")]
+        [JsonProperty(PropertyName = "idPessoa:")]
         public int FkPessoa { get; set; }
     }
 }
