@@ -4,6 +4,7 @@ using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
@@ -28,6 +29,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para listar as skills existentes
+        [Authorize]
         [EnableQuery]
         [HttpGet]
         public IActionResult ListarSkills()
@@ -45,6 +47,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para listar uma skill pelo id
+        [Authorize]
         [EnableQuery]
         [HttpGet("{id}")]
         public IActionResult BuscarPorId(int id)
@@ -90,7 +93,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para cadastrar uma skill
-        [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult CadastrarSkill(CadastroSkillViewModel skill)
         {
@@ -113,7 +116,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para editar uma skill existente
-        [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult EditarSkill(int id, CadastroSkillViewModel skill)
         {
@@ -138,7 +141,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para deletar uma skill existente
-        [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpDelete]
         public IActionResult DeletarSkill(int id)
         {

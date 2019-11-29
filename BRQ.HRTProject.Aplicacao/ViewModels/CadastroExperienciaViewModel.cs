@@ -8,7 +8,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
 {
     public class CadastroExperienciaViewModel
     {
-        [Required(ErrorMessage = "Informe o título:")]
+        [Required(ErrorMessage = "Informe o título")]
         public string Titulo { get; set; }
 
         public string Instituicao { get; set; }
@@ -16,12 +16,8 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public DateTime? DtInicio { get; set; }
         public DateTime? DtFim { get; set; }
 
-        [Required(ErrorMessage = "Informe o ID do tipo de experiência:")]
+        [Required(ErrorMessage = "Informe o ID do tipo de experiência")]
         [JsonProperty(PropertyName = "idTipoExperiencia")]
         public int FkTipoExperiencia { get; set; }
-
-        [Required(ErrorMessage = "Informe o ID da pessoa:")]
-        [JsonProperty(PropertyName = "idPessoa:")]
-        public int FkPessoa { get; set; }
     }
 }

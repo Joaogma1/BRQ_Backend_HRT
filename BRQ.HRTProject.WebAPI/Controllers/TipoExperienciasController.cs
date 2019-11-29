@@ -7,6 +7,7 @@ using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +26,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             _mapperTipoExp = mapperTipoExp;
             _tipoExpRepository = tipoExpRepository;
         }
-
+        [Authorize]
         [EnableQuery]
         [HttpGet]
         public IActionResult ListarTodos()
@@ -39,7 +40,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult Cadastrar(CadastroTipoExperienciaViewModel tipoExp)
         {
@@ -53,7 +54,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, CadastroTipoExperienciaViewModel tipoExp)
         {
@@ -73,7 +74,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

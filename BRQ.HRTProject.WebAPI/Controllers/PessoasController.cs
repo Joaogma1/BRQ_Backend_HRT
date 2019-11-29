@@ -60,6 +60,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
+                
                 return Ok(_pessoaContatoMapper.GetAll());
             }
             catch (Exception ex)
@@ -82,7 +83,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
-        [Authorize(Roles = "Administrador, Colaborador ,Recursos Humanos")]
+        [Authorize]
         [EnableQuery]
         [HttpGet("todosdados/{id}")]
         public IActionResult GetAllById(int id)
@@ -90,7 +91,14 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             try
             {
                 Pessoas p = _pessoaRepository.GetById(id);
-                if (p == null)
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
+                
+                if (HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos" || idpessoa != id)
+                {
+                    return Unauthorized();
+                }
+                else if (p == null)
                 {
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
                 }
@@ -109,9 +117,17 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             try
             {
                 Pessoas p = _pessoaRepository.GetById(id);
-                if (p == null)
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
+
+                if (HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos" || idpessoa != id)
+                {
+                    return Unauthorized();
+                }
+                else if (p == null)
+                {
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
+                }
 
                 return Ok(_pessoaMapper.GetById(id));
             }
@@ -147,7 +163,6 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             try
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
-
 
                 Skills skillBuscada = _skillRepository.GetById(skillAtribuida.FkSkill.Value);
                 if (skillBuscada == null)
