@@ -1,9 +1,9 @@
-﻿
-using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Linq;
@@ -29,6 +29,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             _mapperExp = mapperExp;
         }
 
+        [Authorize]
         [EnableQuery]
         [HttpGet]
         public IActionResult ListarTodas()
@@ -42,19 +43,23 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize]
         [EnableQuery]
         [HttpGet("{id}")]
         public IActionResult BuscarPorID(int id)
         {
             try
             {
+                int idPessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 Experiencias expBuscada = _experienciaRepository.GetById(id);
 
                 if (expBuscada == null)
                 {
                     return NotFound(new { Mensagem = $"Experiência não encontrada!" });
                 }
+                //else if(expBuscada.FkPessoa != idPessoa && HttpContext.User.Claims.First(x => x.Type == "").Value) {
+                //    return Unauthorized();
+                //}
                 return Ok(_mapperExp.BuscarExperienciaPorId(id));
             }
             catch (Exception ex)
@@ -62,7 +67,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize]
         [EnableQuery()]
         [HttpGet("usuario/{id}")]
         public IActionResult BuscarTodasPorIDPessoa(int id)
@@ -82,17 +87,17 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CadastrarExp(CadastroExperienciaViewModel exp)
         {
-
             try
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(exp.FkTipoExperiencia);
                 exp.FkPessoa = idpessoa;
-               
-                if (tipoExpValidacao == null )
+
+                if (tipoExpValidacao == null)
                     return NotFound(new { Mensagem = $"Pessoa e/ou tipo de experiência não existe!" });
 
                 _mapperExp.Add(exp);
@@ -104,12 +109,13 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
-        [HttpPut("{id}")]
-        public IActionResult AtualizarExp(int id, CadastroExperienciaViewModel xp)
+        [Authorize]
+        [HttpPut]
+        public IActionResult AtualizarExp( CadastroExperienciaViewModel xp)
         {
             try
             {
+                int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(id);
                 Pessoas pessoaValidacao = _pessoaRepository.GetById(id);
                 Experiencias expBuscada = _experienciaRepository.GetById(id);
@@ -133,6 +139,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult DeletarExp(int id)
         {

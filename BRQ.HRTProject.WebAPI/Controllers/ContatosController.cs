@@ -72,7 +72,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
 
-
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
@@ -98,26 +98,20 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
-        [HttpPut("{id}")]
-        public IActionResult Update(int id, CadastroContatoViewModel ct)
+        [Authorize]
+        [HttpPut]
+        public IActionResult Update( CadastroContatoViewModel ct)
         {
 
             try
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
-                Contatos ctBuscado = _contatoRepository.GetById(id);
+                Contatos ctBuscado = _contatoRepository.GetById(idpessoa);
 
-                if (id != idpessoa)
-                    return Unauthorized();
 
                 Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
                                
-                if (validaPessoa == null)
-                {
-                    return NotFound(new { Mensagem = "id:" + 1 + " não foi encontrada em pessoas" });
-                }
 
                 if (ctBuscado.FkPessoa != idpessoa)
                 {
