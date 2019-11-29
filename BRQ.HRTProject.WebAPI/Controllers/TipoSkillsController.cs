@@ -4,6 +4,7 @@ using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
@@ -22,6 +23,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para listar os tipos de skill existentes
+        [Authorize]
         [EnableQuery]
         [HttpGet]
         public IActionResult ListarTipoSkills()
@@ -37,7 +39,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para cadastrar o tipo da skill
-        [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult CadastrarTipoSkill(CadastroTipoSkillViewModel tipoSkill)
         {
@@ -54,7 +56,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para editar o tipo da skill
-        [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Editar(int id, CadastroTipoSkillViewModel tipoSkill)
         {
@@ -78,6 +80,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         }
 
         //metodo para deletar o tipo da skill
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

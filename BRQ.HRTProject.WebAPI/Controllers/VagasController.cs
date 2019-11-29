@@ -7,6 +7,7 @@ using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,7 +26,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             _vagaRepository = vagaRepository;
             _mapper = mapper;
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult Add(CadastroVagaViewModel obj)
         {
@@ -39,7 +40,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest(new { erro = ex.ToString() });
             }
         }
-
+        [Authorize]
         [EnableQuery]
         [HttpGet]
         public IActionResult GetAll()
@@ -54,6 +55,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [EnableQuery]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
@@ -65,7 +67,6 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 {
                     return NotFound(new { Mensagem = "Vaga não encontrada"});
                 }
-
                 return Ok(_mapper.GetByID(id));
             }
             catch (Exception ex)
@@ -73,7 +74,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, EdicaoVagaViewModel obj)
         {
@@ -93,7 +94,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

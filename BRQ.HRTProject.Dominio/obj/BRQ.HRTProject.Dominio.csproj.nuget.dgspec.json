@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {}
+    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
         "projectName": "BRQ.HRTProject.Dominio",
-        "projectPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
+        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
         "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\obj\\",
+        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

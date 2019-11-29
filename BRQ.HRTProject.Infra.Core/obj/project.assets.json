@@ -747,11 +747,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+      "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
       "projectName": "BRQ.HRTProject.Infra.Core",
-      "projectPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+      "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
       "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\00836578279\\Desktop\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
+      "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Interfaces;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace BRQ.HRTProject.WebAPI.Controllers
 {
@@ -22,6 +19,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             _requisitosRepository = empresaRepository;
             _mapperRequisitos = mapper;
         }
+        [Authorize]
         [HttpGet]
         public IActionResult Get()
         {
@@ -34,7 +32,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize]
         [HttpGet("{id}")]
         public IActionResult GetByID(int id)
         {
@@ -52,7 +50,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize(Roles ="Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult Post(RequisitoViewModel dadosReq)
         {
@@ -66,7 +64,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, RequisitoViewModel dadosReq)
         {
@@ -84,7 +82,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 return BadRequest();
             }
         }
-
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpDelete("{id}")]
         public IActionResult Del(int id)
         {

@@ -1,18 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Threading.Tasks;
-using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace BRQ.HRTProject.WebAPI.Controllers
 {
+
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
@@ -27,6 +24,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             _mapper = mapper;
         }
 
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPost]
         public IActionResult Add(CadastroEmpresaViewModel obj)
         {
@@ -42,6 +40,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
         }
 
         [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -56,6 +55,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
         }
 
         [EnableQuery]
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -76,6 +76,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, CadastroEmpresaViewModel obj)
         {
@@ -96,6 +97,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
