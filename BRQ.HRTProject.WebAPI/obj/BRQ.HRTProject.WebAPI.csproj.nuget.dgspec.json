@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj": {}
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
         "projectName": "BRQ.HRTProject.Aplicacao",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +30,11 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj"
               }
             }
           }
@@ -81,20 +81,20 @@
         }
       }
     },
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
         "projectName": "BRQ.HRTProject.Dominio",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -165,20 +165,20 @@
         }
       }
     },
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
         "projectName": "BRQ.HRTProject.Infra.Core",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -227,20 +227,20 @@
         }
       }
     },
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj",
         "projectName": "BRQ.HRTProject.Infra.Data",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -253,8 +253,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
               }
             }
           }
@@ -311,20 +311,20 @@
         }
       }
     },
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj",
         "projectName": "BRQ.HRTProject.Infra.Ioc",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -337,14 +337,14 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Dominio\\BRQ.HRTProject.Dominio.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj"
               }
             }
           }
@@ -383,20 +383,20 @@
         }
       }
     },
-    "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj": {
+    "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj",
         "projectName": "BRQ.HRTProject.WebAPI",
-        "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj",
-        "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\BRQ.HRTProject.WebAPI.csproj",
+        "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -409,17 +409,17 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Aplicacao\\BRQ.HRTProject.Aplicacao.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Data\\BRQ.HRTProject.Infra.Data.csproj"
               },
-              "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj": {
-                "projectPath": "C:\\Users\\00836578279\\Documents\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj"
+              "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj": {
+                "projectPath": "C:\\Users\\43369172801\\Desktop\\apihrt\\Agora_Vai_HRT\\BRQ.HRTProject.Infra.Ioc\\BRQ.HRTProject.Infra.Ioc.csproj"
               }
             }
           }

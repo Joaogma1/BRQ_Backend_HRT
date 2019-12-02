@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace BRQ.HRTProject.Aplicacao.Interfacess
+namespace BRQ.HRTProject.Aplicacao.Interfaces
 {
     public interface ICandidaturaService
     {
-        void Candidatar(CandidaturaViewModel dadosCandidatura);
-        void CancelarCandidatura(int id);
-        List<ListarCandidaturaViewModel> ListarCandidaturasPorVagas(int idVaga);
+        void Add(CandidaturaViewModel obj);
+        void Remove(int id);
+        IEnumerable<CandidaturaViewModel> GetByUserId(int userId);
+        IEnumerable<CandidaturaViewModel> GetByVagaId(int vagaId);
     }
 }

@@ -1,11 +1,9 @@
-﻿using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿
+using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.Services;
 using BRQ.HRTProject.Dominio.Interfaces;
 using BRQ.HRTProject.Infra.Data.Repositorios;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BRQ.HRTProject.Infra.Ioc
 {
@@ -17,6 +15,7 @@ namespace BRQ.HRTProject.Infra.Ioc
         public static void RegisterServices(this IServiceCollection services)
         {
             #region Repository
+
             services.AddScoped<ITipoSkillRepository, TipoSkillRepository>();
             services.AddScoped<ISkillRepository, SkillRepository>();
             services.AddScoped<ITipoExperienciaRepository, TipoExperienciaRepository>();
@@ -26,11 +25,13 @@ namespace BRQ.HRTProject.Infra.Ioc
             services.AddScoped<IPessoaRepository, PessoaRepository>();
             services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-
             services.AddScoped<IEmpresaRepository, EmpresaRepository>();
             services.AddScoped<IRequisitoRepository, RequisitoRepository>();
             services.AddScoped<IVagaRepository, VagaRepository>();
+            services.AddScoped<ICandidaturaRepository, CandidaturaRepository>();
+
             #endregion
+
 
             #region Services
             services.AddScoped<IPessoaService, PessoaService>();
@@ -42,10 +43,11 @@ namespace BRQ.HRTProject.Infra.Ioc
             services.AddScoped<ITipoSkillService, TipoSkillService>();
             services.AddScoped<IContatoService, ContatoService>();
             services.AddScoped<ITipoContatoService, TipoContatoService>();
-
             services.AddScoped<IEmpresaService, EmpresaService>();
             services.AddScoped<IRequisitoService, RequisitoService>();
             services.AddScoped<IVagaService, VagaService>();
+
+            services.AddScoped<ICandidaturaService, CandidaturaService>();
             #endregion
         }
     }

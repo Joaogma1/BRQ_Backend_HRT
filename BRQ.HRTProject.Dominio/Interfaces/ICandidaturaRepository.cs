@@ -9,5 +9,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
     public interface ICandidaturaRepository : IBaseRepository<Candidaturas>
     {
         List<Candidaturas> listarPorIdVaga(int id);
+        List<Candidaturas> listarPorIdPessoa(int id);
     }
 }

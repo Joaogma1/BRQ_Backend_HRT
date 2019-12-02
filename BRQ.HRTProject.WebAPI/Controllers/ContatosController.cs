@@ -98,10 +98,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 return BadRequest(new { Erro = ex.ToString() });
             }
         }
-        [Authorize]
-        [HttpPut]
-        public IActionResult Update(CadastroContatoViewModel ct)
-        [Authorize]
+
         [HttpPut]
         public IActionResult Update( CadastroContatoViewModel ct)
         {
