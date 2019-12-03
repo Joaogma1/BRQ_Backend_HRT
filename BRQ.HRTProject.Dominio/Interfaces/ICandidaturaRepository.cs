@@ -10,5 +10,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
     {
         List<Candidaturas> listarPorIdVaga(int id);
         List<Candidaturas> listarPorIdPessoa(int id);
+        bool Exists(Candidaturas candidaturas);
     }
 }

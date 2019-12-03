@@ -7,9 +7,9 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 {
     public interface ICandidaturaService
     {
-        void Add(CandidaturaViewModel obj);
+        void Add(CadastroCandidaturaViewModel obj, int idPessoa);
         void Remove(int id);
-        IEnumerable<CandidaturaViewModel> GetByUserId(int userId);
-        IEnumerable<CandidaturaViewModel> GetByVagaId(int vagaId);
+        IEnumerable<CadastroCandidaturaViewModel> GetByUserId(int userId);
+        IEnumerable<CadastroCandidaturaViewModel> GetByVagaId(int vagaId);
     }
 }

@@ -71,7 +71,7 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
             CreateMap<Vagas, EdicaoVagaViewModel>()
                 .ReverseMap();
 
-            CreateMap<Candidaturas, CandidaturaViewModel>()
+            CreateMap<Candidaturas, CadastroCandidaturaViewModel>()
                 .ReverseMap();
         }
 

@@ -15,14 +15,14 @@ namespace BRQ.HRTProject.WebAPI.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
-    public class CandidaturaController : ControllerBase
+    public class CandidaturasController : ControllerBase
     {
         private readonly ICandidaturaService _candidaturaService;
         private readonly ICandidaturaRepository _candidaturaRepository;
         private readonly IPessoaRepository _pessoaRepository;
         private readonly IVagaRepository _vagaRepository;
 
-        public CandidaturaController(ICandidaturaService candidaturaService, ICandidaturaRepository candidaturaRepository, IPessoaRepository pessoaRepository, IVagaRepository vagaRepository)
+        public CandidaturasController(ICandidaturaService candidaturaService, ICandidaturaRepository candidaturaRepository, IPessoaRepository pessoaRepository, IVagaRepository vagaRepository)
         {
             _candidaturaService = candidaturaService;
             _candidaturaRepository = candidaturaRepository;
@@ -31,11 +31,25 @@ namespace BRQ.HRTProject.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add(CandidaturaViewModel obj)
+        public IActionResult Add(CadastroCandidaturaViewModel obj)
         {
             try
             {
-                _candidaturaService.Add(obj);
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+                Pessoas validaPessoa = _pessoaRepository.GetById(idpessoa);
+
+                if (validaPessoa == null)
+                {
+                    return NotFound(new { Mensagem = "Pessoa não encontrada!" });
+                }
+
+                Vagas validaVaga = _vagaRepository.GetById(obj.FkVaga);
+                if(validaVaga == null)
+                {
+                    return NotFound(new { Mensagem = "Vaga não encontrada!" });
+                }
+
+                _candidaturaService.Add(obj, idpessoa);
                 return Ok();
             }
             catch (Exception ex)
