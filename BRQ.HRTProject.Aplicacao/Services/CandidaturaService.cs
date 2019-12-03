@@ -28,6 +28,8 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 if (_candidaturaRepository.Exists(candidaturas)){
                     throw new Exception("Candidatura já registrada!");
                 }
+
+                candidaturas.FkPessoa = idPessoa;
                 _candidaturaRepository.Add(candidaturas);
             }
             catch (Exception ex)
@@ -36,11 +38,11 @@ namespace BRQ.HRTProject.Aplicacao.Services
             }
         }
 
-        public IEnumerable<CadastroCandidaturaViewModel> GetByUserId(int userId)
+        public IEnumerable<CandidaturaPorPessoaViewModel> GetByUserId(int userId)
         {
             try
             {
-                return _mapper.Map<List<CadastroCandidaturaViewModel>>(_candidaturaRepository.listarPorIdPessoa(userId));
+                return _mapper.Map<List<CandidaturaPorPessoaViewModel>>(_candidaturaRepository.listarPorIdPessoa(userId));
             }
             catch (Exception ex)
             {
@@ -48,11 +50,11 @@ namespace BRQ.HRTProject.Aplicacao.Services
             }
         }
 
-        public IEnumerable<CadastroCandidaturaViewModel> GetByVagaId(int vagaId)
+        public IEnumerable<CandidaturaPorVagaViewModel> GetByVagaId(int vagaId)
         {
             try
             {
-                return _mapper.Map<List<CadastroCandidaturaViewModel>>(_candidaturaRepository.listarPorIdVaga(vagaId));
+                return _mapper.Map<List<CandidaturaPorVagaViewModel>>(_candidaturaRepository.listarPorIdVaga(vagaId));
             }
             catch (Exception ex)
             {

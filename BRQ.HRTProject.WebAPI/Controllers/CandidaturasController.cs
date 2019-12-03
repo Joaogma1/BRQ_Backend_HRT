@@ -7,6 +7,7 @@ using BRQ.HRTProject.Aplicacao.ViewModels;
 using BRQ.HRTProject.Dominio.Entidades;
 using BRQ.HRTProject.Dominio.Interfaces;
 using Microsoft.AspNet.OData;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -30,6 +31,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             _vagaRepository = vagaRepository;
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult Add(CadastroCandidaturaViewModel obj)
         {
@@ -58,12 +60,21 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
             try
             {
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
                 Candidaturas candidaturaBuscada = _candidaturaRepository.GetById(id);
+
+                if(candidaturaBuscada.FkPessoa != idpessoa)
+                {
+                    return Unauthorized();
+                }
+                
                 if(candidaturaBuscada == null)
                 {
                     return NotFound();
@@ -77,16 +88,20 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize]
         [EnableQuery]
         [HttpGet("user/id")]
         public IActionResult GetByUserId(int id)
         {
             try
             {
+                int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
                 Pessoas pessoaBuscada = _pessoaRepository.GetById(id);
-                if(pessoaBuscada == null)
+
+                if (pessoaBuscada.Id != idpessoa)
                 {
-                    return NotFound(new { Mensagem = "Pessoa não encontrada!" });
+                    return Unauthorized();
                 }
                 return Ok(_candidaturaService.GetByUserId(id));
             }
@@ -96,6 +111,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "Administrador, Recursos Humanos ")]
         [EnableQuery]
         [HttpGet("vaga/id")]
         public IActionResult GetByVagaId(int id)
