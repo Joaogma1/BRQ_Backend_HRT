@@ -8,7 +8,7 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 {
     public interface IRequisitoService
     {
-        void CadastrarRequisito(RequisitoViewModel dadosRequisito);
+        void CadastrarRequisito(CadastroRequisitoViewModel dadosRequisito, int idVaga);
 
         void EditarRequisito(RequisitoViewModel dadosRequisitos, int id);
 

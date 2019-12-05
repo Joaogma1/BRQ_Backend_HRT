@@ -40,10 +40,8 @@ namespace BRQ.HRTProject.Aplicacao.Services
 
                 foreach (var requisito in dadosVaga.Requisitos)
                 {
-                    requisito.FkVaga = id;
-                    _requisitoService.CadastrarRequisito(requisito);
+                    _requisitoService.CadastrarRequisito(requisito, id);
                 }
-
             }
             catch (Exception ex)
             {

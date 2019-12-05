@@ -19,6 +19,6 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [JsonProperty(PropertyName = "IdEmpresa")]
         public int FkEmpresa { get; set; }
 
-        public ICollection<RequisitoViewModel> Requisitos { get; set; }
+        public ICollection<CadastroRequisitoViewModel> Requisitos { get; set; }
     }
 }

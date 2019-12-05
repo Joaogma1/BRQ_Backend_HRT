@@ -21,12 +21,13 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _requisitoRepository = requisitoRepository;
         }
 
-        public void CadastrarRequisito(RequisitoViewModel dadosRequisito)
+        public void CadastrarRequisito(CadastroRequisitoViewModel dadosRequisito, int idVaga)
         {
             try
             {
-                var skill = _mapper.Map<Requisitos>(dadosRequisito);
-                _requisitoRepository.Add(skill);
+                var req = _mapper.Map<Requisitos>(dadosRequisito);
+                req.Id = idVaga;
+                _requisitoRepository.Add(req);
             }
             catch (Exception ex)
             {

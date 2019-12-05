@@ -11,6 +11,8 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
     {
         public EntityToViewModel()
         {
+            CreateMap<Requisitos, CadastroRequisitoViewModel>()
+                .ReverseMap();
             CreateMap<Requisitos, RequisitoVagaViewModel>()
                 .ReverseMap();
             CreateMap<Requisitos, RequisitoViewModel>

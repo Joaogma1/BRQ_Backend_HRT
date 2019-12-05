@@ -51,19 +51,19 @@ namespace BRQ.HRTProject.WebAPI.Controllers
             }
         }
         [Authorize(Roles ="Administrador, Recursos Humanos")]
-        [HttpPost]
-        public IActionResult Post(RequisitoViewModel dadosReq)
-        {
-            try
-            {
-                _mapperRequisitos.CadastrarRequisito(dadosReq);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest();
-            }
-        }
+        //[HttpPost]
+        //public IActionResult Post(RequisitoViewModel dadosReq)
+        //{
+        //    try
+        //    {
+        //        _mapperRequisitos.CadastrarRequisito(dadosReq));
+        //        return Ok();
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return BadRequest();
+        //    }
+        //}
         [Authorize(Roles = "Administrador, Recursos Humanos")]
         [HttpPut("{id}")]
         public IActionResult Update(int id, RequisitoViewModel dadosReq)
