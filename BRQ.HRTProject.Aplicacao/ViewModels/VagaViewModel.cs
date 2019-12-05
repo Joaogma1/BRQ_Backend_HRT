@@ -1,4 +1,4 @@
-﻿
+﻿using BRQ.HRTProject.Dominio.Entidades;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,10 +18,10 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public int? CargaHoraria { get; set; }
         public bool? StatusSituacao { get; set; }
 
-        [JsonProperty(PropertyName = "IdEmpresa")]
-        public int FkEmpresa { get; set; }
+        [JsonProperty(PropertyName = "Empresa")]
+        public EmpresaViewModel FkEmpresaNavigation { get; set; }
 
-        [JsonProperty(PropertyName = "IdPessoa")]
-        public int FkPessoa { get; set; }
+        [JsonProperty(PropertyName = "Requisitos")]
+        public ICollection<RequisitoVagaViewModel> Requisitos { get; set; }
     }
 }

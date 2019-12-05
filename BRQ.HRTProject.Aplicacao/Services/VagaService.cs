@@ -14,12 +14,15 @@ namespace BRQ.HRTProject.Aplicacao.Services
         private readonly IMapper _mapper;
         private readonly IPessoaRepository _pessoaRepository;
         private readonly IVagaRepository _vagaRepository;
+        private readonly IRequisitoService _requisitoService;
 
-        public VagaService(IMapper mapper, IPessoaRepository pessoaRepository, IVagaRepository vagaRepository)
+        public VagaService(IMapper mapper, IPessoaRepository pessoaRepository, IVagaRepository vagaRepository, IRequisitoService requisitoService)
         {
+            _requisitoService = requisitoService;
             _mapper = mapper;
             _pessoaRepository = pessoaRepository;
             _vagaRepository = vagaRepository;
+            
         }
 
         public void AtribuirFuncionarioVaga(int idVaga, int idFuncionario)
@@ -33,7 +36,13 @@ namespace BRQ.HRTProject.Aplicacao.Services
             {
                 Vagas vagas = _mapper.Map<Vagas>(dadosVaga);
                 
-                _vagaRepository.Add(vagas);
+               int id = _vagaRepository.CadastraVaga(vagas);
+
+                foreach (var requisito in dadosVaga.Requisitos)
+                {
+                    requisito.FkVaga = id;
+                    _requisitoService.CadastrarRequisito(requisito);
+                }
 
             }
             catch (Exception ex)
@@ -59,7 +68,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                return _mapper.Map<VagaViewModel>(_vagaRepository.GetById(id));
+                return _mapper.Map<VagaViewModel>(_vagaRepository.GetAllData(id));
             }
             catch (Exception ex)
             {
@@ -71,7 +80,9 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                return _mapper.Map<List<VagaViewModel>>(_vagaRepository.GetAll());
+                var vagas = _vagaRepository.GetAllData();
+                var data = _mapper.Map<List<VagaViewModel>>(vagas);
+                return data ;
             }
             catch (Exception ex)
             {

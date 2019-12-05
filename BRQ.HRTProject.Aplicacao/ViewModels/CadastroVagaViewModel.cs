@@ -18,5 +18,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         [Required(ErrorMessage = "Informe o ID da empresa:")]
         [JsonProperty(PropertyName = "IdEmpresa")]
         public int FkEmpresa { get; set; }
+
+        public ICollection<RequisitoViewModel> Requisitos { get; set; }
     }
 }

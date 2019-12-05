@@ -11,5 +11,9 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public int Id { get; set; }
         [JsonProperty(PropertyName = "Skill")]
         public SkillViewModel FkSkillNavigation { get; set; }
+        [JsonProperty(PropertyName = "Pessoa")]
+        public PessoaViewModel FkPessoaNavigation { get; set; }
+
     }
+
 }

@@ -25,7 +25,8 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                _requisitoRepository.Add(_mapper.Map<Requisitos>(dadosRequisito));
+                var skill = _mapper.Map<Requisitos>(dadosRequisito);
+                _requisitoRepository.Add(skill);
             }
             catch (Exception ex)
             {

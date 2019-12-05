@@ -11,6 +11,10 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
     {
         public EntityToViewModel()
         {
+            CreateMap<Requisitos, RequisitoVagaViewModel>()
+                .ReverseMap();
+            CreateMap<Requisitos, RequisitoViewModel>
+                ().ReverseMap();
             CreateMap<TiposSkills, TipoSkillViewModel>()
                 .ReverseMap();
             CreateMap<TiposSkills, CadastroTipoSkillViewModel>()
@@ -62,6 +66,9 @@ namespace BRQ.HRTProject.Aplicacao.AutoMapper.Profiles
             CreateMap<Empresas, EmpresaViewModel>()
                 .ReverseMap();
             CreateMap<Pessoas, EditarPessoaViewModel>()
+                .ReverseMap();
+
+            CreateMap<Skills , SkillVagaViewModel>()
                 .ReverseMap();
 
             CreateMap<Vagas, VagaViewModel>()

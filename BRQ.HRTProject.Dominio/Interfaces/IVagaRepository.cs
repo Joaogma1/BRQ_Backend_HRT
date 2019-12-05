@@ -8,5 +8,12 @@ namespace BRQ.HRTProject.Dominio.Interfaces
 {
     public interface IVagaRepository : IBaseRepository<Vagas>
     {
+        int CadastraVaga(Vagas data);
+
+        List<Vagas> GetAllData();
+
+        Vagas GetAllData(int id);
+
+
     }
 }

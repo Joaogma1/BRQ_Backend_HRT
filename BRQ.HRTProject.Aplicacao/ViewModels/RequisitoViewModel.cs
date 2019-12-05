@@ -7,7 +7,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
 {
     public class RequisitoViewModel
     {
-        public int IdSkill { get; set; }
+        public int FkSkill { get; set; }
         public bool? Diferencial { get; set; }
 
         [JsonProperty(PropertyName = "IdVaga")]
