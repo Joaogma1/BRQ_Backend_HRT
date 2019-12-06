@@ -46,7 +46,7 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
         {
             using (ContextoHRT ctx = new ContextoHRT())
             {
-                return ctx.Vagas.AsNoTracking().Include(x => x.FkEmpresaNavigation).Include(x => x.Requisitos).Include("x.Requisitos.FkSkillNavigation").Where(x=> x.Id == id).FirstOrDefault();
+                return ctx.Vagas.AsNoTracking().Include(x => x.FkEmpresaNavigation).Include(x => x.Requisitos).Include("Requisitos.FkSkillNavigation").Where(x => x.Id == id).FirstOrDefault();
             }
         }
     }

@@ -741,23 +741,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\00836578279\\.nuget\\packages\\": {},
+    "C:\\Users\\43369172801\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\00836578279\\Desktop\\GoogleCloud deploy\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+      "projectUniqueName": "C:\\Users\\43369172801\\Desktop\\APIHRT\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
       "projectName": "BRQ.HRTProject.Infra.Core",
-      "projectPath": "C:\\Users\\00836578279\\Desktop\\GoogleCloud deploy\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
-      "packagesPath": "C:\\Users\\00836578279\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\00836578279\\Desktop\\GoogleCloud deploy\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
+      "projectPath": "C:\\Users\\43369172801\\Desktop\\APIHRT\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\BRQ.HRTProject.Infra.Core.csproj",
+      "packagesPath": "C:\\Users\\43369172801\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\43369172801\\Desktop\\APIHRT\\BRQ_Backend_HRT\\BRQ.HRTProject.Infra.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\00836578279\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\43369172801\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

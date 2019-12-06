@@ -47,3 +47,11 @@ C:\Users\00836578279\Desktop\GoogleCloud deploy\BRQ_Backend_HRT\BRQ.HRTProject.I
 C:\Users\00836578279\Desktop\GoogleCloud deploy\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfo.cs
 C:\Users\00836578279\Desktop\GoogleCloud deploy\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
 C:\Users\00836578279\Desktop\GoogleCloud deploy\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.deps.json
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.csprojAssemblyReference.cache
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfoInputs.cache
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfo.cs
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
