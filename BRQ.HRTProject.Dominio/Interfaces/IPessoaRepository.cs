@@ -18,5 +18,6 @@ namespace BRQ.HRTProject.Dominio.Interfaces
         Pessoas BuscarTodosDadosPorID(int id);
 
         bool CpfExists(string cpf);
+        bool MatriculaExists(string matricula);
     }
 }

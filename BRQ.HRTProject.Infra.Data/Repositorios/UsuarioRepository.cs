@@ -22,5 +22,13 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
                 return usuarioBuscado;
             }
         }
+
+        public bool EmailExists(string email)
+        {
+            using(ContextoHRT ctx = new ContextoHRT())
+            {
+                return ctx.Usuarios.AsNoTracking().Where(x => x.Email == email).FirstOrDefault() != null ? true : false;
+            }
+        }
     }
 }

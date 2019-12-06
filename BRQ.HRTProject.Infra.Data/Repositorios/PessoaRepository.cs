@@ -77,5 +77,13 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
                 return ctx.Pessoas.AsNoTracking().Where(x => x.Cpf == cpf).FirstOrDefault() != null ? true : false;
             }
         }
+
+        public bool MatriculaExists(string matricula)
+        {
+            using(ContextoHRT ctx = new ContextoHRT())
+            {
+                return ctx.Pessoas.AsNoTracking().Where(x => x.Matricula == matricula).FirstOrDefault() != null ? true : false;
+            }
+        }
     }
 }

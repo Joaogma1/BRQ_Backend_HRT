@@ -9,7 +9,9 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
     {
         void Add(CadastroPessoaViewModel obj);
         void Update(EditarPessoaViewModel obj, int id);
-
+        bool MatriculaExists(string matricula);
         bool CpfExists(String cpf);
+        bool EmailExists(string email);
+
     }
 }

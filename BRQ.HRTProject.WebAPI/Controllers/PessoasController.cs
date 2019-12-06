@@ -44,6 +44,16 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 {
                     return BadRequest(new { error = "CPF informado já está em uso" });
                 }
+
+                if (_CadastroPessoaMapper.MatriculaExists(pessoa.Matricula))
+                {
+                    return BadRequest(new { error = "Matricula já está em uso!" });
+                }
+
+                if (_CadastroPessoaMapper.EmailExists(pessoa.Email))
+                {
+                    return BadRequest(new { error = "Email já está em uso!" });
+                }
                 _CadastroPessoaMapper.Add(pessoa);
                 return Ok();
             }

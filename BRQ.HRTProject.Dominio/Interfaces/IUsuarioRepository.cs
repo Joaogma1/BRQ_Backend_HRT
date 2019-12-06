@@ -8,5 +8,7 @@ namespace BRQ.HRTProject.Dominio.Interfaces
     public interface IUsuarioRepository : IBaseRepository<Usuarios>
     {
         Usuarios BuscarPorEmailSenha(string email, string senha);
+
+        bool EmailExists(string matricula);
     }
 }

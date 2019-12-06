@@ -85,7 +85,6 @@ C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\bin\D
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.runtimeconfig.dev.json
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.pdb
-C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.csprojAssemblyReference.cache
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.AssemblyInfoInputs.cache
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.AssemblyInfo.cs
 C:\Users\43369172801\Desktop\APIHRT\BRQ_Backend_HRT\BRQ.HRTProject.Dominio\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Dominio.dll

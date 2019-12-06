@@ -59,6 +59,16 @@ namespace BRQ.HRTProject.Aplicacao.Services
             return _pessoaRepository.CpfExists(cpf);
         }
 
+        public bool EmailExists(string email)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool MatriculaExists(string matricula)
+        {
+            return _pessoaRepository.MatriculaExists(matricula);
+        }
+
         public void Update(EditarPessoaViewModel obj, int id)
         {
             try
