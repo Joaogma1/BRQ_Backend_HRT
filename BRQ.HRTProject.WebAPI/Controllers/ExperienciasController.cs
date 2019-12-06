@@ -99,6 +99,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             try
             {
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
                 TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(exp.FkTipoExperiencia);
 
                 if (tipoExpValidacao == null)
