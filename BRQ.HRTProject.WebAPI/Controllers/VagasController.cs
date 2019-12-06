@@ -65,7 +65,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
                 Vagas vagaBuscada = _vagaRepository.GetById(id); 
                 if(vagaBuscada == null)
                 {
-                    return NotFound(new { Mensagem = "Vaga não encontrada"});
+                    return NotFound(new { Mensagem = "Vaga não encontrada!"});
                 }
                 return Ok(_mapper.GetByID(id));
             }
