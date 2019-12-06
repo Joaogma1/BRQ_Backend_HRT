@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace BRQ.HRTProject.Infra.Core.Validacoes
 {
     public class ValidaCPF : ValidationAttribute
     {
+        private static string FormataCpf(string cpf) => cpf.Replace(".", "").Replace("-", "");
         public override bool IsValid(object value)
         {
             string cpfFormatado = FormataCpf(value.ToString());
@@ -49,7 +47,5 @@ namespace BRQ.HRTProject.Infra.Core.Validacoes
 
             return cpfFormatado.EndsWith(digito);
         }
-        
-        private static string FormataCpf(string cpf) => cpf.Replace(".", "").Replace("-", "");
     }
 }

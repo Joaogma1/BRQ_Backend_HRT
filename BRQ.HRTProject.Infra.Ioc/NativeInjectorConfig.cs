@@ -1,5 +1,4 @@
-﻿
-using BRQ.HRTProject.Aplicacao.Interfaces;
+﻿using BRQ.HRTProject.Aplicacao.Interfaces;
 using BRQ.HRTProject.Aplicacao.Services;
 using BRQ.HRTProject.Dominio.Interfaces;
 using BRQ.HRTProject.Infra.Data.Repositorios;
@@ -15,39 +14,35 @@ namespace BRQ.HRTProject.Infra.Ioc
         public static void RegisterServices(this IServiceCollection services)
         {
             #region Repository
-
-            services.AddScoped<ITipoSkillRepository, TipoSkillRepository>();
-            services.AddScoped<ISkillRepository, SkillRepository>();
-            services.AddScoped<ITipoExperienciaRepository, TipoExperienciaRepository>();
-            services.AddScoped<IExperienciaRepository, ExperienciaRepository>();
-            services.AddScoped<ITipoContatoRepository, TipoContatoRepository>();
-            services.AddScoped<IContatoRepository, ContatoRepository>();
-            services.AddScoped<IPessoaRepository, PessoaRepository>();
-            services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
-            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
-            services.AddScoped<IRequisitoRepository, RequisitoRepository>();
-            services.AddScoped<IVagaRepository, VagaRepository>();
             services.AddScoped<ICandidaturaRepository, CandidaturaRepository>();
-
+            services.AddScoped<IContatoRepository, ContatoRepository>();
+            services.AddScoped<IEmpresaRepository, EmpresaRepository>();
+            services.AddScoped<IExperienciaRepository, ExperienciaRepository>();
+            services.AddScoped<IPessoaRepository, PessoaRepository>();
+            services.AddScoped<IRequisitoRepository, RequisitoRepository>();
+            services.AddScoped<ISkillPessoaRepository, SkillPessoaRepository>();
+            services.AddScoped<ISkillRepository, SkillRepository>();
+            services.AddScoped<ITipoContatoRepository, TipoContatoRepository>();
+            services.AddScoped<ITipoExperienciaRepository, TipoExperienciaRepository>();
+            services.AddScoped<ITipoSkillRepository, TipoSkillRepository>();
+            services.AddScoped<IUsuarioRepository, UsuarioRepository>();
+            services.AddScoped<IVagaRepository, VagaRepository>();
             #endregion
 
-
             #region Services
-            services.AddScoped<IPessoaService, PessoaService>();
-            services.AddScoped<IPessoaContatoService, PessoaContatoService>();
             services.AddScoped<ICadastroPessoaService, CadastroPessoaService>();
-            services.AddScoped<IExperienciaService, ExperienciaService>();
-            services.AddScoped<ITipoExperienciaService, TipoExperienciaService>();
-            services.AddScoped<ISkillService, SkillService>();
-            services.AddScoped<ITipoSkillService, TipoSkillService>();
-            services.AddScoped<IContatoService, ContatoService>();
-            services.AddScoped<ITipoContatoService, TipoContatoService>();
-            services.AddScoped<IEmpresaService, EmpresaService>();
-            services.AddScoped<IRequisitoService, RequisitoService>();
-            services.AddScoped<IVagaService, VagaService>();
-
             services.AddScoped<ICandidaturaService, CandidaturaService>();
+            services.AddScoped<IContatoService, ContatoService>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IExperienciaService, ExperienciaService>();
+            services.AddScoped<IPessoaContatoService, PessoaContatoService>();
+            services.AddScoped<IPessoaService, PessoaService>();
+            services.AddScoped<IRequisitoService, RequisitoService>();
+            services.AddScoped<ISkillService, SkillService>();
+            services.AddScoped<ITipoContatoService, TipoContatoService>();
+            services.AddScoped<ITipoExperienciaService, TipoExperienciaService>();
+            services.AddScoped<ITipoSkillService, TipoSkillService>();
+            services.AddScoped<IVagaService, VagaService>();
             #endregion
         }
     }

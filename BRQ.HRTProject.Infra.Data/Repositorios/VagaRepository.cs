@@ -13,7 +13,6 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
         public VagaRepository(ContextoHRT dbContext) : base(dbContext)
         {
         }
-
         public void AtribuirFuncionarioVaga(Candidaturas dados)
         {
             using (ContextoHRT ctx = new ContextoHRT())

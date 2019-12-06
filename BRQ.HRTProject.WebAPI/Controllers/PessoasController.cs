@@ -93,12 +93,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 Pessoas p = _pessoaRepository.GetById(id);
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
-                
-                if (HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos" || idpessoa != id)
-                {
-                    return Unauthorized();
-                }
-                else if (p == null)
+                if (p == null)
                 {
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
                 }
@@ -119,12 +114,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 Pessoas p = _pessoaRepository.GetById(id);
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
 
-
-                if (HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos" || idpessoa != id)
-                {
-                    return Unauthorized();
-                }
-                else if (p == null)
+                if (p == null)
                 {
                     return NotFound(new { Mensagem = $"Pessoa que possui id: {id}, nao pode ser encontrada" });
                 }
