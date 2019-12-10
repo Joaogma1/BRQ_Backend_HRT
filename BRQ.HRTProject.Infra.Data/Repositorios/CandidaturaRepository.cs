@@ -28,9 +28,18 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
 
         public List<Candidaturas> listarPorIdPessoa(int id)
         {
-            using (ContextoHRT ctx = new ContextoHRT())
+            try
             {
-                return ctx.Candidaturas.Where(x => x.FkPessoaNavigation.Id == id).ToList();
+                using (ContextoHRT ctx = new ContextoHRT())
+                {
+                    var _ = ctx.Candidaturas.Where(x => x.FkPessoa == id).Include(x => x.FkVagaNavigation).ToList();
+                    return _;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception(ex.Message);
             }
         }
 
@@ -38,7 +47,7 @@ namespace BRQ.HRTProject.Infra.Data.Repositorios
         {
             using (ContextoHRT ctx = new ContextoHRT())
             {
-                return ctx.Candidaturas.Where(x => x.FkVagaNavigation.Id == id).ToList();
+                return ctx.Candidaturas.Where(x => x.FkVagaNavigation.Id == id).Include(x => x.FkPessoaNavigation).ToList();
             }
         }
     }

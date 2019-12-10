@@ -23,12 +23,13 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _pessoaRepository = pessoaRepository;
         }
 
-        public void AtribuirSkill(CadastroSkillPessoaViewModel skillPessoa)
+        public void AtribuirSkill(CadastroSkillPessoaViewModel skillPessoa,int id)
         {
             try
             {
 
                 SkillPessoa sp = _mapper.Map<SkillPessoa>(skillPessoa);
+                sp.FkPessoa = id;
                 if (_skillPessoaRepository.Exists(sp))
                     throw new Exception("Skill já foi registrada");
 

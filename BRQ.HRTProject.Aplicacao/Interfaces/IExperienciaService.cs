@@ -7,10 +7,10 @@ namespace BRQ.HRTProject.Aplicacao.Interfaces
 {
     public interface IExperienciaService
     {
-        void Update(CadastroExperienciaViewModel obj, int id);
+        void Update(CadastroExperienciaViewModel obj, int id, int idPessoa);
         IEnumerable<ExperienciaViewModel> GetAll(int userId);
         IEnumerable<ExperienciaViewModel> ListarTodasExperiencias();
         ExperienciaViewModel BuscarExperienciaPorId(int id);
-        void Add(CadastroExperienciaViewModel obj);
+        void Add(CadastroExperienciaViewModel obj, int id);
     }
 }

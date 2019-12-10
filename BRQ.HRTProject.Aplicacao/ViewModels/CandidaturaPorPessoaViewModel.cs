@@ -9,7 +9,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
     {
         public int Id { get; set; }
 
-        [JsonProperty(PropertyName = "IdVaga")]
-        public int FkVaga{ get; set; }
+        [JsonProperty(PropertyName = "Vaga")]
+        public VagaViewModel FkVagaNavigation { get; set; }
     }
 }

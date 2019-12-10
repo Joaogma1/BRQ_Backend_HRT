@@ -57,9 +57,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 {
                     return NotFound(new { Mensagem = $"Experiência não encontrada!" });
                 }
-                else if(expBuscada.FkPessoa != idPessoa || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos") {
-                    return Unauthorized();
-                }
+               
                 return Ok(_mapperExp.BuscarExperienciaPorId(id));
             }
             catch (Exception ex)
@@ -80,10 +78,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
 
                 if (pessoaBuscada == null)
                     return NotFound(new { Mensagem = $"Pessoa não encontrada!" });
-                else if (pessoaBuscada.Id != idPessoa || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Administrador" || HttpContext.User.Claims.First(x => x.Type == "Cargo").Value != "Recursos Humanos")
-                {
-                    return Unauthorized();
-                }
+                
                 return Ok(_mapperExp.GetAll(id));
             }
             catch (Exception ex)
@@ -105,7 +100,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 if (tipoExpValidacao == null)
                     return NotFound(new { Mensagem = $"tipo de experiência não existe!" });
 
-                _mapperExp.Add(exp);
+                _mapperExp.Add(exp, idpessoa);
 
                 return Ok();
             }
@@ -115,13 +110,15 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
             }
         }
         [Authorize]
-        [HttpPut]
-        public IActionResult AtualizarExp(CadastroExperienciaViewModel xp)
+        [HttpPut("{id}")]
+        public IActionResult AtualizarExp(CadastroExperienciaViewModel xp,int id)
         {
             try
             {
-                int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
-                TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(id);
+                int idPessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
+
+                TiposExperiencias tipoExpValidacao = _tipoExpRepository.GetById(xp.FkTipoExperiencia);
+
                 Experiencias expBuscada = _experienciaRepository.GetById(id);
 
                 int idpessoa = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
@@ -133,7 +130,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 if (tipoExpValidacao == null  )
                     return NotFound(new { Mensagem = $"tipo de experiência não existe!" });
 
-                _mapperExp.Update(xp, expBuscada.Id);
+                _mapperExp.Update(xp, id, idPessoa);
 
                 return Ok();
             }

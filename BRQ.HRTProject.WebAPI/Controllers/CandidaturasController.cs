@@ -90,7 +90,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
 
         [Authorize]
         [EnableQuery]
-        [HttpGet("user/id")]
+        [HttpGet("user/{id}")]
         public IActionResult GetByUserId(int id)
         {
             try
@@ -113,7 +113,7 @@ namespace BRQ.HRTProject.WebAPI.Controllers
 
         [Authorize(Roles = "Administrador, Recursos Humanos ")]
         [EnableQuery]
-        [HttpGet("vaga/id")]
+        [HttpGet("vaga/{id}")]
         public IActionResult GetByVagaId(int id)
         {
             try

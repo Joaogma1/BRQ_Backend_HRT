@@ -25,7 +25,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
             _experienciaRepository = experienciaRepository;
         }
 
-        public void Add(CadastroExperienciaViewModel obj)
+        public void Add(CadastroExperienciaViewModel obj, int id)
         {
             try
             {
@@ -34,6 +34,7 @@ namespace BRQ.HRTProject.Aplicacao.Services
                 {
                     throw new Exception("Experiência já cadastrada!");
                 }
+                exp.FkPessoa = id;
                 _experienciaRepository.Add(exp);
             }
             catch (Exception ex)
@@ -76,10 +77,11 @@ namespace BRQ.HRTProject.Aplicacao.Services
             return _mapper.Map<ExperienciaViewModel>(_experienciaRepository.BuscarExperienciaPorId(id));
         }
 
-        public void Update(CadastroExperienciaViewModel obj, int id)
+        public void Update(CadastroExperienciaViewModel obj, int id, int idPessoa)
         {
            Experiencias exp = _mapper.Map<Experiencias>(obj);
             exp.Id = id;
+            exp.FkPessoa = idPessoa;
             _experienciaRepository.Update(exp);
         }
 

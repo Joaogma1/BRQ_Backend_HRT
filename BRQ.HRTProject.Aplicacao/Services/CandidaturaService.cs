@@ -42,7 +42,8 @@ namespace BRQ.HRTProject.Aplicacao.Services
         {
             try
             {
-                return _mapper.Map<List<CandidaturaPorPessoaViewModel>>(_candidaturaRepository.listarPorIdPessoa(userId));
+                List<CandidaturaPorPessoaViewModel> lista = _mapper.Map<List<CandidaturaPorPessoaViewModel>>(_candidaturaRepository.listarPorIdPessoa(userId));
+                return lista;
             }
             catch (Exception ex)
             {

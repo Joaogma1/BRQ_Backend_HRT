@@ -143,7 +143,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
         {
             try
             {
-                int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == JwtRegisteredClaimNames.Jti).Value);
+                int id = Int32.Parse(HttpContext.User.Claims.First(x => x.Type == "IdPessoa").Value);
                 Pessoas PessoaBuscada = _pessoaRepository.GetById(id);
 
                 _CadastroPessoaMapper.Update(dadosPessoa, id);
@@ -169,7 +169,7 @@ namespace BRQ.HRT.Colaboradores.WebAPI.Controllers
                 {
                     return NotFound(new { Mensagem = $"Não foi possível encontrar a skill" });
                 }
-                _pessoaMapper.AtribuirSkill(skillAtribuida);
+                _pessoaMapper.AtribuirSkill(skillAtribuida, idpessoa);
                 return Ok();
             }
             catch (Exception ex)

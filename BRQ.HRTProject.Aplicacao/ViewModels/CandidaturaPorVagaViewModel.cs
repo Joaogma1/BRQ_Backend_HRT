@@ -9,7 +9,7 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
     {
         public int Id { get; set; }
 
-        [JsonProperty(PropertyName = "IdPessoa")]
-        public int FkPessoa { get; set; }
+        [JsonProperty(PropertyName = "Pessoa")]
+        public PessoaViewModel FkPessoaNavigation { get; set; }
     }
 }

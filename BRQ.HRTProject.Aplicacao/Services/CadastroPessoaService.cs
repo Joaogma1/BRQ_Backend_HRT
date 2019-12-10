@@ -74,8 +74,9 @@ namespace BRQ.HRTProject.Aplicacao.Services
             try
             {
                 Pessoas p = _mapper.Map<Pessoas>(obj);
-                _pessoaRepository.Update(p);
                 p.Id = id;
+                _pessoaRepository.Update(p);
+
             }
             catch (Exception ex)
             {
