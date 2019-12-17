@@ -26,9 +26,9 @@ namespace BRQ.HRTProject.Aplicacao.ViewModels
         public bool StatusAlocacao { get; set; }
 
         [JsonProperty(PropertyName = "Contatos")]
-        public ICollection<ContatoViewModel> Contato { get; set; }
+        public ICollection<ContatoViewModel> Contatos { get; set; }
         [JsonProperty(PropertyName = "Experiencias")]
-        public ICollection<ExperienciaViewModel> Experiencia { get; set; }
+        public ICollection<ExperienciaViewModel> Experiencias { get; set; }
         [JsonProperty(PropertyName = "SkillsDaPessoa")]
         public ICollection<SkillPessoaViewModel> SkillPessoa { get; set; }
     }

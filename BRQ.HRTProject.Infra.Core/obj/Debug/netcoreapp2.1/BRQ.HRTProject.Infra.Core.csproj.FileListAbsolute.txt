@@ -64,3 +64,12 @@ C:\Users\52742298835\Desktop\BackEnd\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\o
 C:\Users\52742298835\Desktop\BackEnd\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfo.cs
 C:\Users\52742298835\Desktop\BackEnd\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
 C:\Users\52742298835\Desktop\BackEnd\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.deps.json
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\bin\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.csprojAssemblyReference.cache
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.csproj.CoreCompileInputs.cache
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfoInputs.cache
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.AssemblyInfo.cs
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.dll
+C:\Users\51418943800\Desktop\BRQ_Backend_HRT\BRQ.HRTProject.Infra.Core\obj\Debug\netcoreapp2.1\BRQ.HRTProject.Infra.Core.pdb
